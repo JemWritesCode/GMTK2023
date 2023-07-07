@@ -74,6 +74,9 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# Ignore anything in ImportedAssets
+/[Aa]ssets/[Ii]mported[Aa]ssets/
+
 ######################## Common Assets ########################
 
 # Don't upload Asset Hunter Pro
