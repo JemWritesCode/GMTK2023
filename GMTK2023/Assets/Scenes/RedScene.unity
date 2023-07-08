@@ -1158,6 +1158,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587650283}
     m_Modifications:
+    - target: {fileID: 395130564218663990, guid: a04206f6f6fd9294da43e9a35c8ff776, type: 3}
+      propertyPath: m_text
+      value: 'I''m a yolo guy!
+
+        In a yolo world!
+
+        Yoloing things!
+
+        I
+        am a super sentence max 4 lines.'
+      objectReference: {fileID: 0}
     - target: {fileID: 6895519056561613285, guid: a04206f6f6fd9294da43e9a35c8ff776, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
