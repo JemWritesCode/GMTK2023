@@ -15,3 +15,4 @@ MonoBehaviour:
   <ActorName>k__BackingField: Scarecrow
   <ActorPortrait>k__BackingField: {fileID: 21300000, guid: 9ac2ff77eb6fbfb4a95165ae77f84965, type: 3}
   <ActorPortraitScale>k__BackingField: {x: 1, y: 1, z: 1}
+  <CurrentQuestNode>k__BackingField: {fileID: 11400000, guid: c98092de2e7a8134f8cd462489e78194, type: 2}

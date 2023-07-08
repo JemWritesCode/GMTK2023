@@ -32,6 +32,6 @@ public class DialogManager : MonoBehaviour {
   }
 
   public void InteractWithActor(DialogActor actor) {
-
+    DialogUI.ShowDialogNode(actor, actor.CurrentQuestNode);
   }
 }

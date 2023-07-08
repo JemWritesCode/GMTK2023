@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44600135, g: 0.624972, b: 0.72263163, a: 1}
+  m_IndirectSpecularColor: {r: 0.44601268, g: 0.62494797, b: 0.7225996, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2746,6 +2746,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d2d4cd4fa1784649b558e07dc40d5c6, type: 3}
+--- !u!114 &548890166 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5115852899024459757, guid: 2d2d4cd4fa1784649b558e07dc40d5c6, type: 3}
+  m_PrefabInstance: {fileID: 548890165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c72c3bf1d696048907dad6eb09c2f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &567873944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4706318027965310777, guid: 00b6b466f72e7da45892dc1108bdd9ce, type: 3}
@@ -8887,8 +8898,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5971216264617529144, guid: e506f5b277c619f4bbbb05bfa3f9f84c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 735572948659664034}
   m_SourcePrefab: {fileID: 100100000, guid: e506f5b277c619f4bbbb05bfa3f9f84c, type: 3}
+--- !u!1 &735572948659664033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5971216264617529144, guid: e506f5b277c619f4bbbb05bfa3f9f84c, type: 3}
+  m_PrefabInstance: {fileID: 735572948659664032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &735572948659664034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735572948659664033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ab409dfa289d447902a7693178b1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 548890166}
+        m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
+        m_MethodName: InteractWithActor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 0ee93c57ac09b3841bd16c69911d9fa2, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DialogActor, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  <HoverDistance>k__BackingField: 2
+  <HoverText>k__BackingField: (E) Interact
 --- !u!1001 &811364648021852560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9527,6 +9575,10 @@ PrefabInstance:
     - target: {fileID: 4930060014974136463, guid: d6321959b647d794db5b51b94eaf3a81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176892838885605669, guid: d6321959b647d794db5b51b94eaf3a81, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
       objectReference: {fileID: 0}
     - target: {fileID: 8477985855799104991, guid: d6321959b647d794db5b51b94eaf3a81, type: 3}
       propertyPath: holdJump
