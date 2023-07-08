@@ -1,8 +1,13 @@
 using UnityEngine;
 
 public class InputManager : MonoBehaviour {
-  [field: SerializeField, Header("UIControllers")]
+  [field: SerializeField, Header("UI")]
   public DialogPanelController DialogPanel { get; private set; }
+
+  [field: SerializeField]
+  public QuestItemPanelController QuestItemPanel { get; private set; }
+
+  public QuestItemData TestQuestItem;
 
   static InputManager _instance;
 
@@ -35,8 +40,12 @@ public class InputManager : MonoBehaviour {
     if (Input.GetKeyDown(KeyCode.Tab)) {
       if (DialogPanel.IsPanelVisible) {
         DialogPanel.HidePanel();
+        QuestItemPanel.HidePanel();
       } else {
         DialogPanel.ShowPanel();
+        if (TestQuestItem) {
+          QuestItemPanel.ShowPanel(TestQuestItem);
+        }
       }
     }
   }

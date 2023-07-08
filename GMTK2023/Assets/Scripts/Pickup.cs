@@ -27,6 +27,11 @@ public class Pickup : MonoBehaviour
     {
         player.GetComponent<PlayerInventory>().Equip(itemToGrab);
         PlayPickupSound();
+
+        if (itemToGrab.TryGetComponent(out InteractableHover interactable))
+        {
+            interactable.enabled = false;
+        }
     }
 
     private void PlayPickupSound()
