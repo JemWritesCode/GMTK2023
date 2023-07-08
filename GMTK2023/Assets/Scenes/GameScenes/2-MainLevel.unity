@@ -2052,14 +2052,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852419722656656586, guid: 3270ef1281f64f04f8a2986f4ffe5079, type: 3}
-      propertyPath: TestQuestItem
-      value: 
-      objectReference: {fileID: 11400000, guid: 9d85bf73e4829124398bfc640caf1d85, type: 2}
-    - target: {fileID: 4852419722656656586, guid: 3270ef1281f64f04f8a2986f4ffe5079, type: 3}
-      propertyPath: TestDialogActor
-      value: 
-      objectReference: {fileID: 11400000, guid: 0ee93c57ac09b3841bd16c69911d9fa2, type: 2}
-    - target: {fileID: 4852419722656656586, guid: 3270ef1281f64f04f8a2986f4ffe5079, type: 3}
       propertyPath: <DialogPanel>k__BackingField
       value: 
       objectReference: {fileID: 1777706886}

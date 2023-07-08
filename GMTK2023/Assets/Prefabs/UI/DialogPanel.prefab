@@ -743,6 +743,7 @@ MonoBehaviour:
   <SpeakerPortrait>k__BackingField: {fileID: 8028449782864308810}
   <ConfirmButton>k__BackingField: {fileID: 5793748456845998410}
   <ConfirmButtonLabel>k__BackingField: {fileID: 1859710140011852755}
+  <QuestItemPanel>k__BackingField: {fileID: 7088915743417408422}
 --- !u!1 &7945316821953435728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,3 +1035,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5388155632330865405, guid: 5c201c2ea1a7bce48b61a08587647956, type: 3}
   m_PrefabInstance: {fileID: 6625237247614666857}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7088915743417408422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4148221405589394383, guid: 5c201c2ea1a7bce48b61a08587647956, type: 3}
+  m_PrefabInstance: {fileID: 6625237247614666857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3828fa9777abf48bc25fb8a7e1f4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

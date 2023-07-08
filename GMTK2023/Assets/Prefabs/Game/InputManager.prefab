@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4852419722656656586
 MonoBehaviour:
@@ -45,3 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <DialogPanel>k__BackingField: {fileID: 0}
+  <QuestItemPanel>k__BackingField: {fileID: 0}
+  TestDialogActor: {fileID: 11400000, guid: b7ae7aa7931e4124fa78a7f16f44cb49, type: 2}
+  TestDialogNode: {fileID: 11400000, guid: 78b374beb5430ed47adf96dd6e1bb89f, type: 2}
+  TestQuestItem: {fileID: 11400000, guid: da0374d2b6a44c540ac4c21b455cc895, type: 2}

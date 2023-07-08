@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour {
   public QuestItemPanelController QuestItemPanel { get; private set; }
 
   public DialogActor TestDialogActor;
+  public DialogNode TestDialogNode;
   public QuestItemData TestQuestItem;
 
   static InputManager _instance;
@@ -43,11 +44,7 @@ public class InputManager : MonoBehaviour {
         DialogPanel.HidePanel();
         QuestItemPanel.HidePanel();
       } else {
-        DialogPanel.ShowPanel(TestDialogActor);
-
-        if (TestQuestItem) {
-          QuestItemPanel.ShowPanel(TestQuestItem);
-        }
+        DialogPanel.ShowDialogNode(TestDialogActor, TestDialogNode);
       }
     }
   }
