@@ -13,10 +13,12 @@ public class PlayerInventory : MonoBehaviour
         sockets = GetComponent<MeshSockets>();
     }
 
-    public void Equip(GameObject itemToEquip)
+    public void EquipItem(GameObject itemToEquip)
     {
         objectPlayerIsHolding = itemToEquip;
         sockets.Attach(itemToEquip.transform, MeshSockets.SocketId.Beak);
     }
+
+    //Drop Object. Turn it into the scarecrow and delete it from the world
 }
 
