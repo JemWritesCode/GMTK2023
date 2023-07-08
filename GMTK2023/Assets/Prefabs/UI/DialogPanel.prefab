@@ -783,7 +783,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b884aacb6d22594478861932d7c017fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <PanelCanvasGroup>k__BackingField: {fileID: 6093061191166583406}
+  <DialogPanel>k__BackingField: {fileID: 6093061191166583406}
+  <DialogText>k__BackingField: {fileID: 395130564218663990}
+  <ConfirmButton>k__BackingField: {fileID: 5793748456845998410}
+  <ConfirmButtonLabel>k__BackingField: {fileID: 1859710140011852755}
 --- !u!1 &7945316821953435728
 GameObject:
   m_ObjectHideFlags: 0
