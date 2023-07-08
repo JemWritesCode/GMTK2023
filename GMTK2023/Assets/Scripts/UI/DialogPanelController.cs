@@ -55,6 +55,7 @@ public class DialogPanelController : MonoBehaviour {
     DialogTitle.text = actor.ActorName;
     DialogText.text = node.QuestStartText;
     SpeakerPortrait.sprite = actor.ActorPortrait;
+    SpeakerPortrait.transform.localScale = actor.ActorPortraitScale;
 
     ShowPanel();
 

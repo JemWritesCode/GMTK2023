@@ -9,5 +9,5 @@ public class DialogActor : ScriptableObject {
   public Sprite ActorPortrait { get; private set; }
 
   [field: SerializeField]
-  public Vector3 ActorPortraitScale { get; private set; }
+  public Vector3 ActorPortraitScale { get; private set; } = Vector3.one;
 }

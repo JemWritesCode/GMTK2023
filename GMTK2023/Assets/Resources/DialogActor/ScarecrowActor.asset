@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ActorName>k__BackingField: Scarecrow
   <ActorPortrait>k__BackingField: {fileID: 21300000, guid: 9ac2ff77eb6fbfb4a95165ae77f84965, type: 3}
+  <ActorPortraitScale>k__BackingField: {x: 1, y: 1, z: 1}

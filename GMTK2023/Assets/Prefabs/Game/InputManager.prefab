@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <DialogPanel>k__BackingField: {fileID: 0}
   <QuestItemPanel>k__BackingField: {fileID: 0}
-  TestDialogActor: {fileID: 11400000, guid: b7ae7aa7931e4124fa78a7f16f44cb49, type: 2}
+  TestDialogActor: {fileID: 11400000, guid: 0ee93c57ac09b3841bd16c69911d9fa2, type: 2}
   TestDialogNode: {fileID: 11400000, guid: 78b374beb5430ed47adf96dd6e1bb89f, type: 2}
-  TestQuestItem: {fileID: 11400000, guid: da0374d2b6a44c540ac4c21b455cc895, type: 2}
+  TestQuestItem: {fileID: 11400000, guid: 3ca3c8d579f45d94a91c84521bd363a7, type: 2}

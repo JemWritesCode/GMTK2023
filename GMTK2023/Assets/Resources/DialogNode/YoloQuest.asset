@@ -18,4 +18,6 @@ MonoBehaviour:
 
     It
     helps me brain.'
-  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 0151e073b48fbed4bbd20704d2bd3938, type: 2}
+  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 3ca3c8d579f45d94a91c84521bd363a7, type: 2}
+  <QuestPlayerMissingItemText>k__BackingField: 
+  <QuestPlayerHasItemText>k__BackingField: 

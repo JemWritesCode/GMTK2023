@@ -30,4 +30,8 @@ public class DialogManager : MonoBehaviour {
       DontDestroyOnLoad(gameObject);
     }
   }
+
+  public void InteractWithActor(DialogActor actor) {
+
+  }
 }

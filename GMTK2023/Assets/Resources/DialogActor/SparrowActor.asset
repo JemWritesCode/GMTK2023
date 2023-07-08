@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SparrowActor
   m_EditorClassIdentifier: 
   <ActorName>k__BackingField: Sparrow
-  <ActorPortrait>k__BackingField: {fileID: 21300000, guid: c52e9265847fadf429dda3742294db89, type: 3}
+  <ActorPortrait>k__BackingField: {fileID: 21300000, guid: 4e7fe7954f5cd3e448333e5ad46074c8, type: 3}
+  <ActorPortraitScale>k__BackingField: {x: 0.75, y: 0.75, z: 1}
