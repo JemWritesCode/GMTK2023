@@ -34,7 +34,8 @@ public class InteractManager : MonoBehaviour {
     }
   }
 
-  readonly Collider[] _overlapBoxColliders = new Collider[10];
+  readonly RaycastHit[] _raycastHits = new RaycastHit[10];
+  //readonly Collider[] _overlapBoxColliders = new Collider[10];
   InteractableHover _closestInteractable;
 
   void FixedUpdate() {
@@ -46,12 +47,41 @@ public class InteractManager : MonoBehaviour {
   }
 
   InteractableHover GetClosestInteractable(Transform origin) {
+    //int count =
+    //    Physics.OverlapBoxNonAlloc(
+    //        origin.position + (origin.forward * 2f),
+    //        Vector3.one * 2f,
+    //        _overlapBoxColliders,
+    //        origin.rotation,
+    //        -1,
+    //        QueryTriggerInteraction.Ignore);
+
+    //if (count <= 0) {
+    //  return default;
+    //}
+
+    //InteractableHover closestInteractable = default;
+    //float closestDistance = 100f;
+
+    //for (int i = 0; i < count; i++) {
+    //  Debug.DrawLine(origin.position, _overlapBoxColliders[i].transform.position, Color.red);
+    //  if (_overlapBoxColliders[i].TryGetComponent(out InteractableHover interactable) && interactable.enabled) {
+    //    float distance = Vector3.Distance(origin.position, _overlapBoxColliders[i].transform.position);
+
+    //    if (distance < closestDistance) {
+    //      closestDistance = distance;
+    //      closestInteractable = interactable;
+    //    }
+    //  }
+    //}
+
     int count =
-        Physics.OverlapBoxNonAlloc(
-            origin.position + (origin.forward * 2f),
-            Vector3.one * 2f,
-            _overlapBoxColliders,
-            origin.rotation,
+        Physics.SphereCastNonAlloc(
+            origin.position,
+            0.25f,
+            origin.forward,
+            _raycastHits,
+            4f,
             -1,
             QueryTriggerInteraction.Ignore);
 
@@ -59,21 +89,14 @@ public class InteractManager : MonoBehaviour {
       return default;
     }
 
-    InteractableHover closestInteractable = default;
-    float closestDistance = 100f;
-
     for (int i = 0; i < count; i++) {
-      Debug.DrawLine(origin.position, _overlapBoxColliders[i].transform.position, Color.red);
-      if (_overlapBoxColliders[i].TryGetComponent(out InteractableHover interactable) && interactable.enabled) {
-        float distance = Vector3.Distance(origin.position, _overlapBoxColliders[i].transform.position);
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestInteractable = interactable;
-        }
+      if (_raycastHits[i].collider.TryGetComponent(out InteractableHover interactable)
+          && interactable.enabled
+          && _raycastHits[i].distance <= interactable.HoverDistance) {
+        return interactable;
       }
     }
 
-    return closestInteractable;
+    return default;
   }
 }
