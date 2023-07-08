@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097b276e699bd434cb8e77fea44a035a, type: 3}
   m_Name: FindSuitcaseQuest
   m_EditorClassIdentifier: 
+  <NodeType>k__BackingField: 1
+  <NextNode>k__BackingField: {fileID: 0}
+  <ConversationTexts>k__BackingField: []
+  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 475c63dc4c2900b4a9ba86b672f79845, type: 2}
   <QuestStartText>k__BackingField: Well if we're gonna pack our bags and leave...we
     do need a bag.
-  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 475c63dc4c2900b4a9ba86b672f79845, type: 2}
   <QuestPlayerMissingItemText>k__BackingField: We need something to carry our things
     for our trip!
   <QuestPlayerHasItemText>k__BackingField: This will hold all of our things.

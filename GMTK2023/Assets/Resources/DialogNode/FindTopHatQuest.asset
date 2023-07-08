@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097b276e699bd434cb8e77fea44a035a, type: 3}
   m_Name: FindTopHatQuest
   m_EditorClassIdentifier: 
+  <NodeType>k__BackingField: 1
+  <NextNode>k__BackingField: {fileID: 0}
+  <ConversationTexts>k__BackingField: []
+  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: c9b7f3e91265d8f44b9d4455125f264e, type: 2}
   <QuestStartText>k__BackingField: We're gonna do this, sparrow! Do you think you
     could find something around here to spruce up my outfit? I want to make a good
     impression on the world!
-  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: c9b7f3e91265d8f44b9d4455125f264e, type: 2}
   <QuestPlayerMissingItemText>k__BackingField: I want something to spruce up my outfit
     so I make a good impression...
   <QuestPlayerHasItemText>k__BackingField: This would make anyone look dapper!

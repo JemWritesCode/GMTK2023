@@ -10,18 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 097b276e699bd434cb8e77fea44a035a, type: 3}
-  m_Name: YoloQuest
+  m_Name: OpeningConvo
   m_EditorClassIdentifier: 
-  <NodeType>k__BackingField: 1
-  <NextNode>k__BackingField: {fileID: 0}
-  <ConversationTexts>k__BackingField: []
-  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 3ca3c8d579f45d94a91c84521bd363a7, type: 2}
-  <QuestStartText>k__BackingField: 'Help!
-
-    I can''t find my yolo thing!
-
-    It
-    helps me brain.'
+  <NodeType>k__BackingField: 0
+  <NextNode>k__BackingField: {fileID: 11400000, guid: c98092de2e7a8134f8cd462489e78194, type: 2}
+  <ConversationTexts>k__BackingField:
+  - Hello I am a scarecrow.
+  - I do scarecrow things.
+  - I would like to scare other things.
+  <QuestItemNeeded>k__BackingField: {fileID: 0}
+  <QuestStartText>k__BackingField: 
   <QuestPlayerMissingItemText>k__BackingField: 
   <QuestPlayerHasItemText>k__BackingField: 
   <TrackerTitle>k__BackingField: 

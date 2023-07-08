@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097b276e699bd434cb8e77fea44a035a, type: 3}
   m_Name: FindAxeQuest
   m_EditorClassIdentifier: 
+  <NodeType>k__BackingField: 1
+  <NextNode>k__BackingField: {fileID: 0}
+  <ConversationTexts>k__BackingField: []
+  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 3ca3c8d579f45d94a91c84521bd363a7, type: 2}
   <QuestStartText>k__BackingField: Oh sparrow, it's no use. I've tried and tried
     but my stick is stuck in the dirt.
-  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 3ca3c8d579f45d94a91c84521bd363a7, type: 2}
   <QuestPlayerMissingItemText>k__BackingField: Unless we have something to help me
     not be stuck on this stick, I can't leave...
   <QuestPlayerHasItemText>k__BackingField: This will help free the scarecrow.
