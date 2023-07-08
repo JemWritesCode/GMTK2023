@@ -27,4 +27,22 @@ public class QuestManager : MonoBehaviour {
       DontDestroyOnLoad(gameObject);
     }
   }
+
+  [field: SerializeField]
+  public DialogNode CurrentQuest { get; private set; }
+
+  public void SetCurrentQuest(DialogNode quest) {
+    CurrentQuest = quest;
+  }
+
+  [field: SerializeField]
+  public QuestItemData CurrentQuestItem { get; private set; }
+
+  public void PickupQuestItem(QuestItemData questItem) {
+    CurrentQuestItem = questItem;
+  }
+
+  public void ClearCurrentQuestItem() {
+    CurrentQuestItem = default;
+  }
 }

@@ -12,5 +12,5 @@ public class DialogActor : ScriptableObject {
   public Vector3 ActorPortraitScale { get; private set; } = Vector3.one;
 
   [field: SerializeField, Header("Quest")]
-  public DialogNode CurrentQuestNode { get; private set; }
+  public DialogNode StartingQuest { get; private set; }
 }

@@ -32,6 +32,19 @@ public class DialogManager : MonoBehaviour {
   }
 
   public void InteractWithActor(DialogActor actor) {
-    DialogUI.ShowDialogNode(actor, actor.CurrentQuestNode);
+    if (QuestManager.Instance.CurrentQuest) {
+      Debug.Log("I have CurrentQuest");
+      if (QuestManager.Instance.CurrentQuestItem == QuestManager.Instance.CurrentQuest.QuestItemNeeded) {
+        DialogUI.ShowDialogNode(actor, QuestManager.Instance.CurrentQuest.QuestPlayerHasItemText);
+      } else {
+        DialogUI.ShowDialogNode(actor, QuestManager.Instance.CurrentQuest.QuestPlayerMissingItemText);
+      }
+    } else if (actor.StartingQuest) {
+      Debug.Log("I don't have a quest.");
+      QuestManager.Instance.SetCurrentQuest(actor.StartingQuest);
+      DialogUI.ShowDialogNode(actor, actor.StartingQuest.QuestStartText);
+    } else {
+      Debug.Log("Actor doesn't have a quest.");
+    }
   }
 }

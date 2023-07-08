@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
@@ -12,6 +10,9 @@ public class Pickup : MonoBehaviour
     [SerializeField] AudioSource pickupSound;
     GameObject player;
 
+    [field: SerializeField, Header("Quest")]
+    public QuestItemData QuestItem { get; private set; }
+
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -19,12 +20,20 @@ public class Pickup : MonoBehaviour
 
     public void GrabTheItem()
     {
+        if (!QuestManager.Instance.CurrentQuest || QuestManager.Instance.CurrentQuest.QuestItemNeeded != QuestItem) {
+          return;
+        }
+
         PlayPickupSound();
         player.GetComponent<PlayerInventory>().EquipItem(gameObject, gameObject.name);
 
         if (gameObject.TryGetComponent(out InteractableHover interactable))
         {
             interactable.enabled = false;
+        }
+
+        if (QuestItem) {
+          QuestManager.Instance.PickupQuestItem(QuestItem);
         }
     }
 

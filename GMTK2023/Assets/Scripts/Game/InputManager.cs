@@ -1,15 +1,10 @@
 using SUPERCharacter;
 
-using UnityEditor;
-
 using UnityEngine;
 
 public class InputManager : MonoBehaviour {
   [field: SerializeField, Header("UI")]
   public DialogPanelController DialogPanel { get; private set; }
-
-  [field: SerializeField]
-  public QuestItemPanelController QuestItemPanel { get; private set; }
 
   public DialogActor TestDialogActor;
   public DialogNode TestDialogNode;
@@ -47,7 +42,7 @@ public class InputManager : MonoBehaviour {
       if (DialogPanel.IsPanelVisible) {
         DialogPanel.HidePanel();
       } else {
-        DialogPanel.ShowDialogNode(TestDialogActor, TestDialogNode);
+        DialogPanel.ShowDialogNode(TestDialogActor, TestDialogNode.QuestStartText);
       }
     }
 

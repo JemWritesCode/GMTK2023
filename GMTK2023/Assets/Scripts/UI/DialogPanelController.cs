@@ -51,18 +51,19 @@ public class DialogPanelController : MonoBehaviour {
     IsPanelVisible = false;
   }
 
-  public void ShowDialogNode(DialogActor actor, DialogNode node) {
+  public void ShowDialogNode(DialogActor actor, string dialogText) {
     DialogTitle.text = actor.ActorName;
-    DialogText.text = node.QuestStartText;
+    DialogText.text = dialogText;
     SpeakerPortrait.sprite = actor.ActorPortrait;
     SpeakerPortrait.transform.localScale = actor.ActorPortraitScale;
 
     ShowPanel();
 
-    if (node.QuestItemNeeded) {
-      QuestItemPanel.ShowPanel(node.QuestItemNeeded);
-    } else {
-      QuestItemPanel.HidePanel();
-    }
+    //if (node.QuestItemNeeded) {
+    //  QuestItemPanel.ShowPanel(node.QuestItemNeeded);
+    //} else {
+    //  QuestItemPanel.HidePanel();
+    //}
+    QuestItemPanel.HidePanel();
   }
 }
