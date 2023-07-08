@@ -32,6 +32,7 @@ public class QuestItemPanelController : MonoBehaviour {
         .InsertCallback(0.15f, () => {
           ItemName.text = questItem.ItemName;
           ItemDescription.text = questItem.ItemDescription;
+          ItemSprite.sprite = questItem.ItemSprite;
         })
         .Insert(0f, ItemName.transform.DOPunchPosition(new(0f, 7.5f, 0f), 0.3f, 0, 0))
         .Insert(0f, ItemDescription.transform.DOPunchPosition(new(0f, 7.5f, 0f), 0.3f, 0, 0))
