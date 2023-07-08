@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
 public class QuestManager : MonoBehaviour {
+  [field: SerializeField]
+  public QuestTrackerPanelController QuestTrackerPanel { get; private set; }
+
   static QuestManager _instance;
 
   public static QuestManager Instance {
@@ -33,6 +36,12 @@ public class QuestManager : MonoBehaviour {
 
   public void SetCurrentQuest(DialogNode quest) {
     CurrentQuest = quest;
+    QuestTrackerPanel.ShowQuestInfo(quest.TrackerTitle, quest.TrackerInfoItemMissingText);
+  }
+
+  public void ClearCurrentQuest() {
+    CurrentQuest = default;
+    QuestTrackerPanel.HidePanel();
   }
 
   [field: SerializeField]
@@ -40,6 +49,10 @@ public class QuestManager : MonoBehaviour {
 
   public void PickupQuestItem(QuestItemData questItem) {
     CurrentQuestItem = questItem;
+
+    if (CurrentQuest) {
+      QuestTrackerPanel.ShowQuestInfo(CurrentQuest.TrackerTitle, CurrentQuest.TrackerInfoItemFoundText);
+    }
   }
 
   public void ClearCurrentQuestItem() {
