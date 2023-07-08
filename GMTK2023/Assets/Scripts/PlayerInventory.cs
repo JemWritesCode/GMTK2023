@@ -16,7 +16,7 @@ public class PlayerInventory : MonoBehaviour
     public void EquipItem(GameObject itemToEquip)
     {
         objectPlayerIsHolding = itemToEquip;
-        sockets.Attach(itemToEquip.transform, MeshSockets.SocketId.Beak);
+        sockets.AttachToSocket(itemToEquip.transform, MeshSockets.SocketId.Body);
     }
 
     public void GiveItemToScarecrow(GameObject itemToUnequip)

@@ -6,7 +6,7 @@ public class MeshSockets : MonoBehaviour
 {
     public enum SocketId
     {
-        Beak
+        Body
     }
 
     Dictionary<SocketId, MeshSocket> socketMap = new Dictionary<SocketId, MeshSocket>();
@@ -19,9 +19,9 @@ public class MeshSockets : MonoBehaviour
             }
     }
 
-    public void Attach(Transform objectTransform, SocketId socketId)
+    public void AttachToSocket(Transform objectTransform, SocketId socketId)
     {
-        socketMap[socketId].Attach(objectTransform);
+        socketMap[socketId].AttachToSocketOffset(objectTransform);
     }
 
 }

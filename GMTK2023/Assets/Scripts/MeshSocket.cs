@@ -8,14 +8,10 @@ public class MeshSocket : MonoBehaviour
     public MeshSockets.SocketId socketID;
     Transform attachPont;
 
-    private void Start()
-    {
-        attachPont = transform.GetChild(0);
-    }
-
     // I might need to change the offset depending on what the prefab the bird picks up is here.a
 
-    public void Attach(Transform objectTransform) { 
+    public void AttachToSocketOffset(Transform objectTransform) {
+        attachPont = transform.Find("KeyOffset");
         objectTransform.SetParent(attachPont, false);
     }
 
