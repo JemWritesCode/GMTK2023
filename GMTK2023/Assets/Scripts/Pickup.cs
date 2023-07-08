@@ -23,11 +23,6 @@ public class Pickup : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    private void Update()
-    {
-        GrabTheItem(itemToPickup); // jemdebug, this needs to be tied to e to interact
-    }
-
     public void GrabTheItem(GameObject itemToGrab)
     {
         player.GetComponent<PlayerInventory>().Equip(itemToGrab);
