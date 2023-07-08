@@ -17,3 +17,6 @@ MonoBehaviour:
   <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 9d85bf73e4829124398bfc640caf1d85, type: 2}
   <QuestPlayerMissingItemText>k__BackingField: It's shiny and small.
   <QuestPlayerHasItemText>k__BackingField: Wow! You found the key!
+  <TrackerTitle>k__BackingField: Key to the Gate
+  <TrackerInfoItemMissingText>k__BackingField: Looking for a small shiny key.
+  <TrackerInfoItemFoundText>k__BackingField: You found it!

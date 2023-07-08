@@ -13,4 +13,15 @@ public class DialogNode : ScriptableObject {
 
   [field: SerializeField, TextArea()]
   public string QuestPlayerHasItemText { get; private set; }
+
+  [field: Header("QuestTracker")]
+  [field: SerializeField]
+  public string TrackerTitle { get; private set; }
+
+  [field: SerializeField, TextArea()]
+  public string TrackerInfoItemMissingText { get; private set; }
+
+  [field: SerializeField, TextArea()]
+  public string TrackerInfoItemFoundText { get; private set; }
+
 }
