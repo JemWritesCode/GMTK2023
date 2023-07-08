@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44600135, g: 0.624972, b: 0.72263163, a: 1}
+  m_IndirectSpecularColor: {r: 0.44601268, g: 0.62494797, b: 0.7225996, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1973,6 +1973,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3260713095669504944, guid: 1c327c8a46d66a849b022e6cfc85e1ff, type: 3}
   m_PrefabInstance: {fileID: 394590292}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &401559512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7517171682270348521, guid: 85d3a86fb195c4046be1a290eb2e17af, type: 3}
+  m_PrefabInstance: {fileID: 811364648021852560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81155182622c920429bae2030410e75e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &401866424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9897,9 +9908,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4683280489932560550, guid: 9df2f83ce1ce0124b8d0c514830fa4e3, type: 3}
-      propertyPath: <CurrentQuest>k__BackingField
+      propertyPath: <QuestTrackerPanel>k__BackingField
       value: 
-      objectReference: {fileID: 11400000, guid: c98092de2e7a8134f8cd462489e78194, type: 2}
+      objectReference: {fileID: 401559512}
     - target: {fileID: 5608371795176750708, guid: 9df2f83ce1ce0124b8d0c514830fa4e3, type: 3}
       propertyPath: m_Name
       value: QuestManager
