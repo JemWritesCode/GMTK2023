@@ -47,13 +47,13 @@ public class InteractPanelController : MonoBehaviour {
 
     DOTween.Sequence()
         .SetTarget(InteractPanel)
-        .Insert(0f, InteractPanel.transform.DOPunchPosition(new(0f, 10f, 0f), 0.2f, 0, 0f))
-        .Insert(0.1f, InteractPanel.DOFade(1f, 0.1f));
+        .Insert(0f, InteractPanel.transform.DOPunchPosition(new(0f, 40f, 0f), 0.4f, 0, 0f))
+        .Insert(0.2f, InteractPanel.DOFade(1f, 0.2f));
   }
 
   public void HideInteractPanel() {
     IsVisible = false;
     InteractPanel.DOComplete(withCallbacks: false);
-    InteractPanel.DOFade(0f, 0.1f);
+    InteractPanel.DOFade(0f, 0.2f);
   }
 }

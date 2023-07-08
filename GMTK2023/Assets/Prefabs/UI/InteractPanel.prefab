@@ -190,14 +190,14 @@ MonoBehaviour:
   m_text: (E) to interact.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a090746ac0ef2c342a0ef86a7d5a2499, type: 2}
-  m_sharedMaterial: {fileID: -5336536158201766938, guid: a090746ac0ef2c342a0ef86a7d5a2499, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: d020445d5bd75e04d9423ea37cf422bf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4280366147
+  m_fontColor: {r: 0.2627451, g: 0.20392159, b: 0.12941177, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
