@@ -30,14 +30,8 @@ public class Pickup : MonoBehaviour
 
     public void GrabTheItem(GameObject itemToGrab)
     {
-        MakePlayerHoldItem(itemToGrab);
+        player.GetComponent<PlayerInventory>().Equip(itemToGrab);
         PlayPickupSound();
-    }
-
-    private void MakePlayerHoldItem(GameObject itemToGrab)
-    {
-        itemToGrab.transform.SetParent(player.transform);
-        player.GetComponent<PlayerInventory>().objectPlayerIsHolding = itemToGrab;
     }
 
     private void PlayPickupSound()
