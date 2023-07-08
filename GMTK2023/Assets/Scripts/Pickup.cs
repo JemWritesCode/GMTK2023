@@ -16,21 +16,28 @@ public class Pickup : MonoBehaviour
 
     [SerializeField] GameObject itemToPickup;
     [SerializeField] AudioSource pickupSound;
+    [SerializeField] GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
 
     private void Update()
     {
-        grabTheItem(itemToPickup); // jemdebug
+        GrabTheItem(itemToPickup); // jemdebug, this needs to be tied to e to interact
     }
 
-    public void grabTheItem(GameObject itemToGrab)
+    public void GrabTheItem(GameObject itemToGrab)
     {
-        // add to player inventory. I think it'll be byref based on what was being raycasted 
-        // lets not instantiate or destroy because that takes resources. simply move it's position to being attached to the bird
-
-        //GameObject.Destroy(this.gameObject);
-        itemToGrab.transform.SetParent(GameObject.FindWithTag("Player").transform); // this sets it to be a child of the player BUT it's transform is relative to the center of the player, it's not connected to the animation rig
+        MakePlayerHoldItem(itemToGrab);
         PlayPickupSound();
+    }
 
+    private void MakePlayerHoldItem(GameObject itemToGrab)
+    {
+        itemToGrab.transform.SetParent(player.transform);
+        player.GetComponent<PlayerInventory>().objectPlayerIsHolding = itemToGrab;
     }
 
     private void PlayPickupSound()

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField] GameObject objectPlayerIsHolding;
+    public GameObject objectPlayerIsHolding;
 }
 
