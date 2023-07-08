@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b276e699bd434cb8e77fea44a035a, type: 3}
+  m_Name: FindAxeQuest
+  m_EditorClassIdentifier: 
+  <QuestStartText>k__BackingField: Oh sparrow, it's no use. I've tried and tried
+    but my stick is stuck in the dirt.
+  <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 3ca3c8d579f45d94a91c84521bd363a7, type: 2}
+  <QuestPlayerMissingItemText>k__BackingField: Unless we have something to help me
+    not be stuck on this stick, I can't leave...
+  <QuestPlayerHasItemText>k__BackingField: This will help free the scarecrow.
+  <TrackerTitle>k__BackingField: Free My Friend
+  <TrackerInfoItemMissingText>k__BackingField: "I need to find something to set my
+    friend free \t"
+  <TrackerInfoItemFoundText>k__BackingField: You found an axe!
