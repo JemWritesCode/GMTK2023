@@ -20,8 +20,9 @@ public class Pickup : MonoBehaviour
 
     public void GrabTheItem()
     {
-        if (!QuestManager.Instance.CurrentQuest || QuestManager.Instance.CurrentQuest.QuestItemNeeded != QuestItem) {
-          return;
+        if (!QuestManager.Instance.CurrentQuest || QuestManager.Instance.CurrentQuest.QuestItemNeeded != QuestItem)
+        {
+            return;
         }
 
         PlayPickupSound();
