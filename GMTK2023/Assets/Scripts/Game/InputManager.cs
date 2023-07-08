@@ -1,3 +1,7 @@
+using SUPERCharacter;
+
+using UnityEditor;
+
 using UnityEngine;
 
 public class InputManager : MonoBehaviour {
@@ -42,10 +46,56 @@ public class InputManager : MonoBehaviour {
     if (Input.GetKeyDown(KeyCode.Tab)) {
       if (DialogPanel.IsPanelVisible) {
         DialogPanel.HidePanel();
-        QuestItemPanel.HidePanel();
       } else {
         DialogPanel.ShowDialogNode(TestDialogActor, TestDialogNode);
       }
     }
+
+    UpdateCursorLockState();
+  }
+
+  SUPERCharacterAIO _playerCharacterController;
+
+  public SUPERCharacterAIO PlayerCharacterController {
+    get {
+      if (!_playerCharacterController) {
+        _playerCharacterController =
+          GameObject.FindGameObjectWithTag("Player").GetComponent<SUPERCharacterAIO>();
+      }
+
+      return _playerCharacterController;
+    }
+  }
+
+  public bool IsCursorLocked { get; private set; }
+
+  public void UpdateCursorLockState() {
+    bool shouldUnlockCursor = DialogPanel.IsPanelVisible;
+
+    if (shouldUnlockCursor) {
+      if (IsCursorLocked) {
+        UnlockCursor();
+      }
+    } else {
+      if (!IsCursorLocked) {
+        LockCursor();
+      }
+    }
+  }
+
+  public void LockCursor() {
+    IsCursorLocked = true;
+    PlayerCharacterController.UnpausePlayer();
+
+    Cursor.lockState = CursorLockMode.Locked;
+    Cursor.visible = false;
+  }
+
+  public void UnlockCursor() {
+    IsCursorLocked = false;
+    PlayerCharacterController.PausePlayer(PauseModes.BlockInputOnly);
+
+    Cursor.lockState = CursorLockMode.Confined;
+    Cursor.visible = true;
   }
 }
