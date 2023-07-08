@@ -7,4 +7,7 @@ public class DialogActor : ScriptableObject {
 
   [field: SerializeField]
   public Sprite ActorPortrait { get; private set; }
+
+  [field: SerializeField]
+  public Vector3 ActorPortraitScale { get; private set; }
 }
