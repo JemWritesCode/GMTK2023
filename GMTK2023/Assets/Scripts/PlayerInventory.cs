@@ -19,6 +19,9 @@ public class PlayerInventory : MonoBehaviour
         sockets.Attach(itemToEquip.transform, MeshSockets.SocketId.Beak);
     }
 
-    //Drop Object. Turn it into the scarecrow and delete it from the world
+    public void GiveItemToScarecrow(GameObject itemToUnequip)
+    {
+        Destroy(itemToUnequip);
+    }
 }
 

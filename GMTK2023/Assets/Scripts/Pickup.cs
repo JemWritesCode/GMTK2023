@@ -10,7 +10,7 @@ public class Pickup : MonoBehaviour
     // some kind of effect on pickups. Maybe just a particle effect
 
     [SerializeField] AudioSource pickupSound;
-    [SerializeField] GameObject player;
+    GameObject player;
 
     private void Start()
     {
