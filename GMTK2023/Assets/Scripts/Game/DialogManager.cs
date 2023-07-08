@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class DialogManager : MonoBehaviour {
@@ -33,18 +35,49 @@ public class DialogManager : MonoBehaviour {
 
   public void InteractWithActor(DialogActor actor) {
     if (QuestManager.Instance.CurrentQuest) {
-      Debug.Log("I have CurrentQuest");
-      if (QuestManager.Instance.CurrentQuestItem == QuestManager.Instance.CurrentQuest.QuestItemNeeded) {
-        DialogUI.ShowDialogNode(actor, QuestManager.Instance.CurrentQuest.QuestPlayerHasItemText);
-      } else {
-        DialogUI.ShowDialogNode(actor, QuestManager.Instance.CurrentQuest.QuestPlayerMissingItemText);
-      }
-    } else if (actor.StartingQuest) {
-      Debug.Log("I don't have a quest.");
-      QuestManager.Instance.SetCurrentQuest(actor.StartingQuest);
-      DialogUI.ShowDialogNode(actor, actor.StartingQuest.QuestStartText);
+      ProcessNode(actor, QuestManager.Instance.CurrentQuest);
     } else {
-      Debug.Log("Actor doesn't have a quest.");
+      ProcessNode(actor, actor.StartingQuest);
+    }
+  }
+
+  public void ProcessFindItemQuestNode(DialogActor actor, DialogNode node) {
+    if (QuestManager.Instance.CurrentQuest == node) {
+      Debug.Log("I have CurrentQuest");
+      if (QuestManager.Instance.CurrentQuestItem == node.QuestItemNeeded) {
+        Debug.Log("I have the item!");
+
+        DialogUI.ShowDialogNode(
+            actor,
+            node.QuestPlayerHasItemText,
+            () => ProcessNode(actor, node.NextNode));
+
+        QuestManager.Instance.ClearCurrentQuest();
+        QuestManager.Instance.ClearCurrentQuestItem();
+      } else {
+        DialogUI.ShowDialogNode(actor, node.QuestPlayerMissingItemText);
+      }
+    } else {
+      Debug.Log("I don't have a quest.");
+      QuestManager.Instance.SetCurrentQuest(node);
+      DialogUI.ShowDialogNode(actor, node.QuestStartText);
+    }
+  }
+
+  public void ProcessConversationNode(DialogActor actor, DialogNode node) {
+
+  }
+
+  public void ProcessNode(DialogActor actor, DialogNode node) {
+    if (!node) {
+      DialogUI.HidePanel();
+      return;
+    }
+
+    if (node.NodeType == DialogNode.DialogNodeType.Conversation) {
+
+    } else if (node.NodeType == DialogNode.DialogNodeType.FindItemQuest) {
+      ProcessFindItemQuestNode(actor, node);
     }
   }
 }

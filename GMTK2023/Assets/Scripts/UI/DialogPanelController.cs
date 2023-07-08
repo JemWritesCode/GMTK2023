@@ -3,6 +3,7 @@ using DG.Tweening;
 using TMPro;
 
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogPanelController : MonoBehaviour {
@@ -31,6 +32,7 @@ public class DialogPanelController : MonoBehaviour {
 
   void Start() {
     ResetPanel();
+    QuestItemPanel.HidePanel();
   }
 
   public void ResetPanel() {
@@ -51,19 +53,26 @@ public class DialogPanelController : MonoBehaviour {
     IsPanelVisible = false;
   }
 
-  public void ShowDialogNode(DialogActor actor, string dialogText) {
+  UnityAction _confirmAction;
+
+  public void ShowDialogNode(DialogActor actor, string dialogText, UnityAction confirmAction = default) {
     DialogTitle.text = actor.ActorName;
     DialogText.text = dialogText;
     SpeakerPortrait.sprite = actor.ActorPortrait;
     SpeakerPortrait.transform.localScale = actor.ActorPortraitScale;
 
-    ShowPanel();
+    _confirmAction = confirmAction;
 
-    //if (node.QuestItemNeeded) {
-    //  QuestItemPanel.ShowPanel(node.QuestItemNeeded);
-    //} else {
-    //  QuestItemPanel.HidePanel();
-    //}
-    QuestItemPanel.HidePanel();
+    ShowPanel();
+  }
+
+  public void OnConfirmAction() {
+    if (_confirmAction == null) {
+      HidePanel();
+    } else {
+      UnityAction confirmAction = _confirmAction;
+      _confirmAction = default;
+      confirmAction();
+    }
   }
 }

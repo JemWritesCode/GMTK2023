@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class QuestManager : MonoBehaviour {
   [field: SerializeField]
@@ -31,12 +32,15 @@ public class QuestManager : MonoBehaviour {
     }
   }
 
+  public UnityEvent<QuestItemData> OnSetCurrentQuestEvent;
+
   [field: SerializeField]
   public DialogNode CurrentQuest { get; private set; }
 
   public void SetCurrentQuest(DialogNode quest) {
     CurrentQuest = quest;
     QuestTrackerPanel.ShowQuestInfo(quest.TrackerTitle, quest.TrackerInfoItemMissingText);
+    OnSetCurrentQuestEvent?.Invoke(quest.QuestItemNeeded);
   }
 
   public void ClearCurrentQuest() {

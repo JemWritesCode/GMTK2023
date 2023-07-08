@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4445565579033804221}
         m_TargetAssemblyTypeName: DialogPanelController, Assembly-CSharp
-        m_MethodName: HidePanel
+        m_MethodName: OnConfirmAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

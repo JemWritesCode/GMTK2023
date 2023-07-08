@@ -10,12 +10,27 @@ public class Pickup : MonoBehaviour
     [SerializeField] AudioSource pickupSound;
     GameObject player;
 
+    [field: SerializeField]
+    public GameObject QuestPickupEffect { get; private set; }
+
     [field: SerializeField, Header("Quest")]
     public QuestItemData QuestItem { get; private set; }
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
+
+        QuestManager.Instance.OnSetCurrentQuestEvent?.AddListener(OnSetCurrentQuestEventHandler);
+
+        if (QuestPickupEffect) {
+          QuestPickupEffect.SetActive(false);
+        }
+    }
+
+    public void OnSetCurrentQuestEventHandler(QuestItemData questItem) {
+      if (QuestPickupEffect) {
+        QuestPickupEffect.SetActive(QuestItem && QuestItem == questItem);
+      }
     }
 
     public void GrabTheItem()

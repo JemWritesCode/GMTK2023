@@ -16,8 +16,7 @@ MonoBehaviour:
   <NextNode>k__BackingField: {fileID: 0}
   <ConversationTexts>k__BackingField: []
   <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: e0d71b5f0b33cfb448f2685b76888e19, type: 2}
-  <QuestStartText>k__BackingField: I'd at least need a key just to get out of here,
-    the farmer always locks the gate.
+  <QuestStartText>k__BackingField: A map would help us find where to go next.
   <QuestPlayerMissingItemText>k__BackingField: Hmm...we need something to help us
     navigate the world...
   <QuestPlayerHasItemText>k__BackingField: This will guide the way!
