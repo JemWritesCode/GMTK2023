@@ -64,7 +64,7 @@ public class InteractManager : MonoBehaviour {
 
     for (int i = 0; i < count; i++) {
       Debug.DrawLine(origin.position, _overlapBoxColliders[i].transform.position, Color.red);
-      if (_overlapBoxColliders[i].TryGetComponent(out InteractableHover interactable)) {
+      if (_overlapBoxColliders[i].TryGetComponent(out InteractableHover interactable) && interactable.enabled) {
         float distance = Vector3.Distance(origin.position, _overlapBoxColliders[i].transform.position);
 
         if (distance < closestDistance) {
