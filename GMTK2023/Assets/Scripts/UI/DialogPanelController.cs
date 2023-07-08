@@ -6,12 +6,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogPanelController : MonoBehaviour {
-  [field: Header("UI")]
   [field: SerializeField]
   public CanvasGroup DialogPanel { get; private set; }
 
   [field: SerializeField]
+  public TMP_Text DialogTitle { get; private set; }
+
+  [field: SerializeField]
   public TMP_Text DialogText { get; private set; }
+
+  [field: SerializeField]
+  public Image SpeakerPortrait { get; private set; }
 
   [field: SerializeField]
   public Button ConfirmButton { get; private set; }
@@ -31,7 +36,10 @@ public class DialogPanelController : MonoBehaviour {
     IsPanelVisible = false;
   }
 
-  public void ShowPanel() {
+  public void ShowPanel(DialogActor actor) {
+    DialogTitle.text = actor.ActorName;
+    SpeakerPortrait.sprite = actor.ActorPortrait;
+    
     DialogPanel.DOFade(1f, 0.25f);
     DialogPanel.blocksRaycasts = true;
     IsPanelVisible = true;

@@ -1010,6 +1010,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0151e073b48fbed4bbd20704d2bd3938, type: 2}
     - target: {fileID: 4852419722656656586, guid: 3270ef1281f64f04f8a2986f4ffe5079, type: 3}
+      propertyPath: TestDialogActor
+      value: 
+      objectReference: {fileID: 11400000, guid: b7ae7aa7931e4124fa78a7f16f44cb49, type: 2}
+    - target: {fileID: 4852419722656656586, guid: 3270ef1281f64f04f8a2986f4ffe5079, type: 3}
       propertyPath: <DialogPanel>k__BackingField
       value: 
       objectReference: {fileID: 1777706886}

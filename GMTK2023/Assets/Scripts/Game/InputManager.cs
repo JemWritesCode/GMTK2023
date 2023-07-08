@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour {
   [field: SerializeField]
   public QuestItemPanelController QuestItemPanel { get; private set; }
 
+  public DialogActor TestDialogActor;
   public QuestItemData TestQuestItem;
 
   static InputManager _instance;
@@ -42,7 +43,8 @@ public class InputManager : MonoBehaviour {
         DialogPanel.HidePanel();
         QuestItemPanel.HidePanel();
       } else {
-        DialogPanel.ShowPanel();
+        DialogPanel.ShowPanel(TestDialogActor);
+
         if (TestQuestItem) {
           QuestItemPanel.ShowPanel(TestQuestItem);
         }
