@@ -19,9 +19,9 @@ public class MeshSockets : MonoBehaviour
             }
     }
 
-    public void AttachToSocket(Transform objectTransform, SocketId socketId)
+    public void AttachToSocket(Transform objectTransform, SocketId socketId, string itemName)
     {
-        socketMap[socketId].AttachToSocketOffset(objectTransform);
+        socketMap[socketId].AttachToSocketOffset(objectTransform, itemName);
     }
 
 }

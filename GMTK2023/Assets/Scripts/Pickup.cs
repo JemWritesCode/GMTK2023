@@ -20,7 +20,7 @@ public class Pickup : MonoBehaviour
     public void GrabTheItem()
     {
         PlayPickupSound();
-        player.GetComponent<PlayerInventory>().EquipItem(gameObject);
+        player.GetComponent<PlayerInventory>().EquipItem(gameObject, gameObject.name);
 
         if (gameObject.TryGetComponent(out InteractableHover interactable))
         {
