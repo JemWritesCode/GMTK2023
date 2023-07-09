@@ -17,11 +17,12 @@ MonoBehaviour:
   <ConversationTexts>k__BackingField: []
   <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 3ca3c8d579f45d94a91c84521bd363a7, type: 2}
   <QuestStartText>k__BackingField: Oh sparrow, it's no use. I've tried and tried
-    but my stick is stuck in the dirt.
-  <QuestPlayerMissingItemText>k__BackingField: Unless we have something to help me
-    not be stuck on this stick, I can't leave...
-  <QuestPlayerHasItemText>k__BackingField: This will help free the scarecrow.
-  <TrackerTitle>k__BackingField: Free My Friend
-  <TrackerInfoItemMissingText>k__BackingField: "I need to find something to set my
-    friend free \t"
-  <TrackerInfoItemFoundText>k__BackingField: You found an axe!
+    but my stick is stuck in the dirt. How am I supposed to get free?
+  <QuestPlayerMissingItemText>k__BackingField: How am I supposed to leave when I'm
+    stuck in the dirt like this?
+  <QuestPlayerHasItemText>k__BackingField: Sparrow! Be careful! But...that might
+    just work...
+  <TrackerTitle>k__BackingField: Freedom for Friend
+  <TrackerInfoItemMissingText>k__BackingField: I need to find something to set my
+    friend free from the stick that's stuck.
+  <TrackerInfoItemFoundText>k__BackingField: You found an axe! Bring it back to Scarecrow.

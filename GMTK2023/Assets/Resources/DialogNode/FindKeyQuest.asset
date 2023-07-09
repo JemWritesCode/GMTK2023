@@ -18,8 +18,12 @@ MonoBehaviour:
   <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 9d85bf73e4829124398bfc640caf1d85, type: 2}
   <QuestStartText>k__BackingField: I'd at least need a key just to get out of here,
     the farmer always locks the gate.
-  <QuestPlayerMissingItemText>k__BackingField: It's shiny and small.
-  <QuestPlayerHasItemText>k__BackingField: Wow! You found the key!
+  <QuestPlayerMissingItemText>k__BackingField: I think I see something shining over
+    there in the lettuce...
+  <QuestPlayerHasItemText>k__BackingField: Thank you! This is great, we'll be able
+    to open the gate!
   <TrackerTitle>k__BackingField: Key to the Gate
-  <TrackerInfoItemMissingText>k__BackingField: Looking for a small shiny key.
-  <TrackerInfoItemFoundText>k__BackingField: You found a key to open the gate!
+  <TrackerInfoItemMissingText>k__BackingField: Find a key to open the gate.
+  <TrackerInfoItemFoundText>k__BackingField: 'Bring the key back to Scarecrow!
+
+'
