@@ -1094,7 +1094,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'And the two set off on a grand adventure
+  m_text: 'And the two set off on a grand adventure to see the world.
+
+    The End.
 
 '
   m_isRightToLeft: 0
