@@ -25,6 +25,8 @@ public class InteractManager : MonoBehaviour {
     }
   }
 
+  public bool CanInteract { get; set; } = true;
+
   void Awake() {
     if (_instance) {
       Destroy(this);
@@ -43,7 +45,7 @@ public class InteractManager : MonoBehaviour {
   InteractableHover _closestInteractable;
 
   void FixedUpdate() {
-    _closestInteractable = GetClosestInteractable(InteractAgent.transform);
+    _closestInteractable = CanInteract ? GetClosestInteractable(InteractAgent.transform) : default;
   }
 
   void Update() {

@@ -43,6 +43,7 @@ public class DialogPanelController : MonoBehaviour {
 
   public void ShowPanel() {
     DialogPanel.DOComplete(withCallbacks: true);
+    InteractManager.Instance.CanInteract = false;
     DialogPanel.DOFade(1f, 0.25f)
         .OnComplete(() => {
           DialogPanel.blocksRaycasts = true;
@@ -52,6 +53,7 @@ public class DialogPanelController : MonoBehaviour {
 
   public void HidePanel() {
     DialogPanel.DOComplete(withCallbacks: true);
+    InteractManager.Instance.CanInteract = true;
     DialogPanel.DOFade(0f, 0.25f)
         .OnComplete(() => {
           DialogPanel.blocksRaycasts = false;
