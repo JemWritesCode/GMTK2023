@@ -1,3 +1,5 @@
+using Unity.VisualScripting.Antlr3.Runtime;
+
 using UnityEngine;
 
 public class DialogManager : MonoBehaviour {
@@ -63,7 +65,18 @@ public class DialogManager : MonoBehaviour {
   }
 
   public void ProcessConversationNode(DialogActor actor, DialogNode node) {
+    if (node.ConversationTextIndex >= node.ConversationTexts.Count) {
+      DialogUI.HidePanel();
+      return;
+    }
 
+    DialogUI.ShowDialogNode(
+        actor,
+        node.ConversationTexts[node.ConversationTextIndex],
+        () => {
+          node.ConversationTextIndex++;
+          ProcessNode(actor, node.ConversationTextIndex >= node.ConversationTexts.Count ? node.NextNode : node);
+        });
   }
 
   public void ProcessNode(DialogActor actor, DialogNode node) {
@@ -73,7 +86,7 @@ public class DialogManager : MonoBehaviour {
     }
 
     if (node.NodeType == DialogNode.DialogNodeType.Conversation) {
-
+      ProcessConversationNode(actor, node);
     } else if (node.NodeType == DialogNode.DialogNodeType.FindItemQuest) {
       ProcessFindItemQuestNode(actor, node);
     }

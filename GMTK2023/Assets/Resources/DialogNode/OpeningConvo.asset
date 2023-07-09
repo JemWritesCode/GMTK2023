@@ -15,9 +15,9 @@ MonoBehaviour:
   <NodeType>k__BackingField: 0
   <NextNode>k__BackingField: {fileID: 11400000, guid: c98092de2e7a8134f8cd462489e78194, type: 2}
   <ConversationTexts>k__BackingField:
-  - Hello I am a scarecrow.
-  - I do scarecrow things.
-  - I would like to scare other things.
+  - 'Sparrow, I have been standing here in this cornfield for as long as I can remember. '
+  - I have always wanted to see more of the world, but I can't leave.
+  - Can you help me?
   <QuestItemNeeded>k__BackingField: {fileID: 0}
   <QuestStartText>k__BackingField: 
   <QuestPlayerMissingItemText>k__BackingField: 

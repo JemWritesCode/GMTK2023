@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using UnityEngine;
 
@@ -17,6 +18,9 @@ public class DialogNode : ScriptableObject {
 
   [field: SerializeField, Header("Conversation")]
   public List<string> ConversationTexts { get; private set; }
+
+  [field: NonSerialized]
+  public int ConversationTextIndex = 0;
 
   [field: SerializeField, Header("Quest")]
   public QuestItemData QuestItemNeeded { get; private set; }
