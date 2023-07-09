@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2159665588474435238}
   - component: {fileID: 6833109521437882655}
   - component: {fileID: 5793748456845998410}
+  - component: {fileID: 996215971015441839}
   m_Layer: 5
   m_Name: ConfirmButton
   m_TagString: Untagged
@@ -37,9 +38,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -50, y: -25}
+  m_AnchoredPosition: {x: -162.5, y: 15}
   m_SizeDelta: {x: 225, y: 80}
-  m_Pivot: {x: 1, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2159665588474435238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -134,6 +135,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &996215971015441839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358557359743609169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b845b000f83e4b4c831a9cc02fe4c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <DoScaleEndValue>k__BackingField: {x: 0.975, y: 0.975, z: 1}
+  <DoScaleDuration>k__BackingField: 0.5
 --- !u!1 &2005735684613031362
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,8 +249,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -952,6 +967,10 @@ PrefabInstance:
     - target: {fileID: 4826348902766904215, guid: 5c201c2ea1a7bce48b61a08587647956, type: 3}
       propertyPath: m_Name
       value: QuestItemPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826348902766904215, guid: 5c201c2ea1a7bce48b61a08587647956, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5388155632330865405, guid: 5c201c2ea1a7bce48b61a08587647956, type: 3}
       propertyPath: m_Pivot.x

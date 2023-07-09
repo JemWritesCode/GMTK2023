@@ -36,9 +36,17 @@ public class QuestTrackerPanelController : MonoBehaviour {
   }
 
   public void ShowQuestInfo(string questTitle, string questInfo) {
+    DOTween.Complete(QuestTrackerPanel);
+
     QuestTitle.text = questTitle;
     QuestInfo.text = questInfo;
 
-    ShowPanel();
+    DOTween.Sequence()
+        .SetTarget(QuestTrackerPanel)
+        .Insert(0f, QuestTitle.transform.DOPunchPosition(new(0f, 8f, 0f), 0.3f, 0, 0))
+        .Insert(0f, QuestInfo.transform.DOPunchPosition(new(0f, -8f, 0f), 0.3f, 0, 0))
+        .Insert(0.15f, QuestTrackerPanel.DOFade(1f, 0.15f));
+
+    IsPanelVisible = true;
   }
 }
