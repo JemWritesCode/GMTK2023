@@ -57,6 +57,7 @@ public class QuestManager : MonoBehaviour {
 
     if (CurrentQuest) {
       QuestTrackerPanel.ShowQuestInfo(CurrentQuest.TrackerTitle, CurrentQuest.TrackerInfoItemFoundText);
+      QuestTrackerPanel.ShowQuestItem(CurrentQuest.QuestItemNeeded);
     }
   }
 

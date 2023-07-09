@@ -28,7 +28,7 @@ public class GameStartEvent : MonoBehaviour{
 
     InputManager.Instance.MenuPanel.ShowHelpPanel();
 
-    yield return new WaitForSeconds(7.5f);
+    yield return new WaitForSeconds(5f);
 
     if (!InputManager.Instance.MenuPanel.IsVisible) {
       InputManager.Instance.MenuPanel.HideHelpPanel();
