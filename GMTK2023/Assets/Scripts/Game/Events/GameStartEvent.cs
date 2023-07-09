@@ -11,11 +11,27 @@ public class GameStartEvent : MonoBehaviour{
 
   void Start() {
     StartCoroutine(StartOpeningConvo());
+    StartCoroutine(ShowHelpPanel());
   }
 
   IEnumerator StartOpeningConvo() {
-    yield return new WaitForSeconds(1f);
+    yield return null;
+    InputManager.Instance.UnlockCursor();
+
+    yield return new WaitForSeconds(0.5f);
 
     DialogManager.Instance.ProcessNode(OpeningConvoActor, OpeningConvoNode);
+  }
+
+  IEnumerator ShowHelpPanel() {
+    yield return new WaitForSeconds(1f);
+
+    InputManager.Instance.MenuPanel.ShowHelpPanel();
+
+    yield return new WaitForSeconds(7.5f);
+
+    if (!InputManager.Instance.MenuPanel.IsVisible) {
+      InputManager.Instance.MenuPanel.HideHelpPanel();
+    }
   }
 }
