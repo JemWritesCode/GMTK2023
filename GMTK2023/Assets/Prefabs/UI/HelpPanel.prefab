@@ -72,8 +72,10 @@ MonoBehaviour:
 
     E to interact.
 
-    Escape
-    to toggle menu.'
+    Space
+    to jump.
+
+    Esc / Tab to toggle menu.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a090746ac0ef2c342a0ef86a7d5a2499, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: d020445d5bd75e04d9423ea37cf422bf, type: 2}
@@ -110,7 +112,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
-  m_characterSpacing: 5
+  m_characterSpacing: 4
   m_wordSpacing: 0
   m_lineSpacing: 5
   m_lineSpacingMax: 0

@@ -52,7 +52,7 @@ public class InputManager : MonoBehaviour {
   }
 
   void Update() {
-    if (Input.GetKeyDown(ToggleMenuKey)) {
+    if (Input.GetKeyDown(ToggleMenuKey) || Input.GetKeyDown(KeyCode.Tab)) {
       MenuPanel.TogglePanel();
     }
 
