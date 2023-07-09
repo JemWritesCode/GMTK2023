@@ -23,7 +23,11 @@ public class AnimateStart : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
   }
 
   public void OnPointerEnter(PointerEventData eventData) {
-    _onHoverTweener.Restart();
+    if (_onHoverTweener.IsPlaying()) {
+      _onHoverTweener.PlayForward();
+    } else {
+      _onHoverTweener.Restart();
+    }
   }
 
   public void OnPointerExit(PointerEventData eventData) {
