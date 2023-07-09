@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb91ddd9c1c1b74c95970125a41d970, type: 3}
   m_Name: Suitcase
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 21300000, guid: 6dd69b36253621346ae2c5166e6caa16, type: 3}
+  <ItemSprite>k__BackingField: {fileID: 21300000, guid: dca1778ce0472734dab51cca54220a9a, type: 3}
   <ItemName>k__BackingField: Suitcase
   <ItemDescription>k__BackingField: Bring your whole house with you.
