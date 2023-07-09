@@ -1,6 +1,7 @@
 using Unity.VisualScripting.Antlr3.Runtime;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour {
   [field: SerializeField, Header("UI")]
@@ -79,6 +80,10 @@ public class DialogManager : MonoBehaviour {
         });
   }
 
+  public void ProcessSceneChangeNode(DialogNode node) {
+    SceneManager.LoadScene(node.SceneNameToLoad);
+  }
+
   public void ProcessNode(DialogActor actor, DialogNode node) {
     if (!node) {
       DialogUI.HidePanel();
@@ -89,6 +94,8 @@ public class DialogManager : MonoBehaviour {
       ProcessConversationNode(actor, node);
     } else if (node.NodeType == DialogNode.DialogNodeType.FindItemQuest) {
       ProcessFindItemQuestNode(actor, node);
+    } else if (node.NodeType == DialogNode.DialogNodeType.SceneChange) {
+      ProcessSceneChangeNode(node);
     }
   }
 }

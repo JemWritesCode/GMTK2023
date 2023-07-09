@@ -7,7 +7,8 @@ using UnityEngine;
 public class DialogNode : ScriptableObject {
   public enum DialogNodeType {
     Conversation,
-    FindItemQuest
+    FindItemQuest,
+    SceneChange
   }
 
   [field: SerializeField, Header("Node")]
@@ -44,4 +45,7 @@ public class DialogNode : ScriptableObject {
   [field: SerializeField, TextArea()]
   public string TrackerInfoItemFoundText { get; private set; }
 
+  [field: Header("SceneChange")]
+  [field: SerializeField]
+  public string SceneNameToLoad { get; private set; }
 }
