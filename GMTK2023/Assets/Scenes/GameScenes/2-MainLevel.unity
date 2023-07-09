@@ -20321,7 +20321,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e9d9bdecc6ee884a8ebedbbee1541e9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -22503,6 +22503,10 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 1977081529}
+    - target: {fileID: 4852916225667344540, guid: 0dcbb4e5e1c2e0c4e863ff30f11364fe, type: 3}
+      propertyPath: <HoverDistance>k__BackingField
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8109565378644228234, guid: 0dcbb4e5e1c2e0c4e863ff30f11364fe, type: 3}
       propertyPath: m_RootOrder
       value: -1
