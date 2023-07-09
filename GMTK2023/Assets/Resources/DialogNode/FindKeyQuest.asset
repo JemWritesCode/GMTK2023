@@ -16,8 +16,11 @@ MonoBehaviour:
   <NextNode>k__BackingField: {fileID: 11400000, guid: c62b56fc05cc4c44e8faa53b20d44fc9, type: 2}
   <ConversationTexts>k__BackingField: []
   <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 9d85bf73e4829124398bfc640caf1d85, type: 2}
-  <QuestStartText>k__BackingField: I'd at least need a key just to get out of here,
-    the farmer always locks the gate.
+  <QuestStartText>k__BackingField: 'I''d at least need a key just to get out of here,
+    the farmer always locks the gate. I think I see something shining over there
+    in the lettuce...
+
+'
   <QuestPlayerMissingItemText>k__BackingField: I think I see something shining over
     there in the lettuce...
   <QuestPlayerHasItemText>k__BackingField: Thank you! This is great, we'll be able
@@ -27,3 +30,4 @@ MonoBehaviour:
   <TrackerInfoItemFoundText>k__BackingField: 'Bring the key back to Scarecrow!
 
 '
+  <SceneNameToLoad>k__BackingField: 
