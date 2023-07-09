@@ -34,7 +34,7 @@ public class InputManager : MonoBehaviour {
         if (!_instance) {
           GameObject inputManager = new("InputManager");
           _instance = inputManager.AddComponent<InputManager>();
-          DontDestroyOnLoad(inputManager);
+          //DontDestroyOnLoad(inputManager);
         }
       }
 
@@ -47,7 +47,7 @@ public class InputManager : MonoBehaviour {
       Destroy(this);
     } else {
       _instance = this;
-      DontDestroyOnLoad(gameObject);
+      //DontDestroyOnLoad(gameObject);
     }
   }
 

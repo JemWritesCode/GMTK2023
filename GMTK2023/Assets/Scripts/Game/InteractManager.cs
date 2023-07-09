@@ -17,7 +17,7 @@ public class InteractManager : MonoBehaviour {
         if (!_instance) {
           GameObject interactManager = new("InteractManager");
           _instance = interactManager.AddComponent<InteractManager>();
-          DontDestroyOnLoad(interactManager);
+          //DontDestroyOnLoad(interactManager);
         }
       }
 
@@ -32,7 +32,7 @@ public class InteractManager : MonoBehaviour {
       Destroy(this);
     } else {
       _instance = this;
-      DontDestroyOnLoad(gameObject);
+      //DontDestroyOnLoad(gameObject);
     }
   }
 
@@ -45,7 +45,7 @@ public class InteractManager : MonoBehaviour {
   InteractableHover _closestInteractable;
 
   void FixedUpdate() {
-    _closestInteractable = CanInteract ? GetClosestInteractable(InteractAgent.transform) : default;
+    _closestInteractable = CanInteract && InteractAgent ? GetClosestInteractable(InteractAgent.transform) : default;
   }
 
   void Update() {
