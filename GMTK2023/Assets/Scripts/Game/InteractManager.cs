@@ -44,10 +44,10 @@ public class InteractManager : MonoBehaviour {
 
   void FixedUpdate() {
     _closestInteractable = GetClosestInteractable(InteractAgent.transform);
+  }
 
-    if (InteractPanel) {
-      InteractPanel.SetInteractable(_closestInteractable);
-    }
+  void Update() {
+    InteractPanel.SetInteractable(_closestInteractable);
   }
 
   InteractableHover GetClosestInteractable(Transform origin) {

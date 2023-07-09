@@ -1,5 +1,3 @@
-using Unity.VisualScripting;
-
 using UnityEngine;
 
 public class DialogManager : MonoBehaviour {
@@ -34,6 +32,10 @@ public class DialogManager : MonoBehaviour {
   }
 
   public void InteractWithActor(DialogActor actor) {
+    if (DialogUI.IsPanelVisible) {
+      return;
+    }
+
     if (QuestManager.Instance.CurrentQuest) {
       ProcessNode(actor, QuestManager.Instance.CurrentQuest);
     } else {
@@ -43,10 +45,7 @@ public class DialogManager : MonoBehaviour {
 
   public void ProcessFindItemQuestNode(DialogActor actor, DialogNode node) {
     if (QuestManager.Instance.CurrentQuest == node) {
-      Debug.Log("I have CurrentQuest");
       if (QuestManager.Instance.CurrentQuestItem == node.QuestItemNeeded) {
-        Debug.Log("I have the item!");
-
         DialogUI.ShowDialogNode(
             actor,
             node.QuestPlayerHasItemText,
@@ -58,7 +57,6 @@ public class DialogManager : MonoBehaviour {
         DialogUI.ShowDialogNode(actor, node.QuestPlayerMissingItemText);
       }
     } else {
-      Debug.Log("I don't have a quest.");
       QuestManager.Instance.SetCurrentQuest(node);
       DialogUI.ShowDialogNode(actor, node.QuestStartText);
     }

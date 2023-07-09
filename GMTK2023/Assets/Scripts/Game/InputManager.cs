@@ -15,6 +15,9 @@ public class InputManager : MonoBehaviour {
   [field: SerializeField]
   public QuestTrackerPanelController QuestTrackerPanel { get; private set; }
 
+  [field: SerializeField, Header("KeyBinds")]
+  public KeyCode InteractKey { get; private set; } = KeyCode.E;
+
 #if UNITY_EDITOR
   public const KeyCode ToggleMenuKey = KeyCode.F2;
 #else
@@ -51,6 +54,10 @@ public class InputManager : MonoBehaviour {
   void Update() {
     if (Input.GetKeyDown(ToggleMenuKey)) {
       MenuPanel.TogglePanel();
+    }
+
+    if (Input.GetKeyDown(InteractKey) && DialogPanel.IsPanelVisible) {
+      DialogPanel.OnConfirmAction();
     }
 
     UpdateCursorLockState();

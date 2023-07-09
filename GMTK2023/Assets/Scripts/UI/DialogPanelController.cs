@@ -42,15 +42,21 @@ public class DialogPanelController : MonoBehaviour {
   }
 
   public void ShowPanel() {
-    DialogPanel.DOFade(1f, 0.25f);
-    DialogPanel.blocksRaycasts = true;
-    IsPanelVisible = true;
+    DialogPanel.DOComplete(withCallbacks: true);
+    DialogPanel.DOFade(1f, 0.25f)
+        .OnComplete(() => {
+          DialogPanel.blocksRaycasts = true;
+          IsPanelVisible = true;
+        });
   }
 
   public void HidePanel() {
-    DialogPanel.DOFade(0f, 0.25f);
-    DialogPanel.blocksRaycasts = false;
-    IsPanelVisible = false;
+    DialogPanel.DOComplete(withCallbacks: true);
+    DialogPanel.DOFade(0f, 0.25f)
+        .OnComplete(() => {
+          DialogPanel.blocksRaycasts = false;
+          IsPanelVisible = false;
+        });
   }
 
   UnityAction _confirmAction;
