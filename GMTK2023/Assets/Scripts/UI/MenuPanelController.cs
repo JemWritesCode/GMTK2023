@@ -10,6 +10,9 @@ public class MenuPanelController : MonoBehaviour {
   [field: SerializeField]
   public Button QuitGameButton { get; private set; }
 
+  [field: SerializeField]
+  public CanvasGroup HelpPanel { get; private set; }
+
   public bool IsVisible { get; private set; }
 
   void Start() {
@@ -20,18 +23,21 @@ public class MenuPanelController : MonoBehaviour {
     IsVisible = false;
     MenuPanel.alpha = 0f;
     MenuPanel.blocksRaycasts = false;
+    HelpPanel.alpha = 0f;
   }
 
   public void ShowPanel() {
     IsVisible = true;
     MenuPanel.DOFade(1f, 0.25f);
     MenuPanel.blocksRaycasts = true;
+    ShowHelpPanel();
   }
 
   public void HidePanel() {
     IsVisible = false;
     MenuPanel.DOFade(0f, 0.25f);
     MenuPanel.blocksRaycasts = false;
+    HideHelpPanel();
   }
 
   public void TogglePanel() {
@@ -40,6 +46,14 @@ public class MenuPanelController : MonoBehaviour {
     } else {
       ShowPanel();
     }
+  }
+
+  public void ShowHelpPanel() {
+    HelpPanel.DOFade(1f, 0.25f);
+  }
+
+  public void HideHelpPanel() {
+    HelpPanel.DOFade(0f, 0.25f);
   }
 
   public void OnQuitGameButton() {
