@@ -48,6 +48,10 @@ public class Pickup : MonoBehaviour
             interactable.enabled = false;
         }
 
+        if (QuestPickupEffect) {
+          QuestPickupEffect.SetActive(false);
+        }
+
         if (QuestItem) {
           QuestManager.Instance.PickupQuestItem(QuestItem);
         }
