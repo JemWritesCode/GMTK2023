@@ -46,6 +46,7 @@ public class QuestManager : MonoBehaviour {
   public void ClearCurrentQuest() {
     CurrentQuest = default;
     QuestTrackerPanel.HidePanel();
+    OnSetCurrentQuestEvent?.Invoke(default);
   }
 
   [field: SerializeField]
@@ -61,5 +62,13 @@ public class QuestManager : MonoBehaviour {
 
   public void ClearCurrentQuestItem() {
     CurrentQuestItem = default;
+    ClearPlayerEquippedQuestItem();
+  }
+
+  public void ClearPlayerEquippedQuestItem() {
+    GameObject player = GameObject.FindWithTag("Player");
+    if (player && player.TryGetComponent(out PlayerInventory inventory)) {
+      inventory.UnequipItem();
+    }
   }
 }
