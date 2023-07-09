@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour {
   [field: SerializeField, Header("UI")]
+  public MenuPanelController MenuPanel { get; private set; }
+
+  [field: SerializeField]
   public DialogPanelController DialogPanel { get; private set; }
 
-  public DialogActor TestDialogActor;
-  public DialogNode TestDialogNode;
-  public QuestItemData TestQuestItem;
+  [field: SerializeField]
+  public InteractPanelController InteractPanel { get; private set; }
+
+  [field: SerializeField]
+  public QuestTrackerPanelController QuestTrackerPanel { get; private set; }
+
+#if UNITY_EDITOR
+  public const KeyCode ToggleMenuKey = KeyCode.F2;
+#else
+  public const KeyCode ToggleMenuKey = KeyCode.Escape;
+#endif
 
   static InputManager _instance;
 
@@ -38,12 +49,8 @@ public class InputManager : MonoBehaviour {
   }
 
   void Update() {
-    if (Input.GetKeyDown(KeyCode.Tab)) {
-      if (DialogPanel.IsPanelVisible) {
-        DialogPanel.HidePanel();
-      } else {
-        DialogPanel.ShowDialogNode(TestDialogActor, TestDialogNode.QuestStartText);
-      }
+    if (Input.GetKeyDown(ToggleMenuKey)) {
+      MenuPanel.TogglePanel();
     }
 
     UpdateCursorLockState();
@@ -65,7 +72,7 @@ public class InputManager : MonoBehaviour {
   public bool IsCursorLocked { get; private set; }
 
   public void UpdateCursorLockState() {
-    bool shouldUnlockCursor = DialogPanel.IsPanelVisible;
+    bool shouldUnlockCursor = MenuPanel.IsVisible || DialogPanel.IsPanelVisible;
 
     if (shouldUnlockCursor) {
       if (IsCursorLocked) {
