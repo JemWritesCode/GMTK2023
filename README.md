@@ -13,8 +13,7 @@ This is our submission for the [GMTK Game Jam 2023](https://itch.io/jam/gmtk-202
 ## Built with
  - Unity Game Engine
 ### Assets Used
- - List item
- - list item
+* [See the full list of assets here](https://github.com/JemWritesCode/GMTK2023/blob/main/assets.md)
 ## Our Team
 
  - [JemWritesCode](https://github.com/JemWritesCode) 
