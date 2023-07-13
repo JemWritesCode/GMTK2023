@@ -56,8 +56,12 @@ public class InputManager : MonoBehaviour {
       MenuPanel.TogglePanel();
     }
 
-    if (Input.GetKeyDown(InteractKey) && DialogPanel.IsPanelVisible) {
-      DialogPanel.OnConfirmAction();
+    if (Input.GetKeyDown(InteractKey)) {
+      if (DialogPanel.IsPanelVisible) {
+        DialogPanel.OnConfirmAction();
+      } else if (InteractManager.Instance.ClosestInteractable) {
+        InteractManager.Instance.ClosestInteractable.Interact();
+      }
     }
 
     UpdateCursorLockState();

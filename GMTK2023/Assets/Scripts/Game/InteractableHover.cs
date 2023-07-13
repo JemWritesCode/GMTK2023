@@ -3,7 +3,7 @@ using SUPERCharacter;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InteractableHover : MonoBehaviour, IInteractable {
+public class InteractableHover : MonoBehaviour {
   public UnityEvent OnInteract;
 
   [field: SerializeField]

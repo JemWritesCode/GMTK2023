@@ -27321,7 +27321,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  <HoverDistance>k__BackingField: 5
+  <HoverDistance>k__BackingField: 4
   <HoverText>k__BackingField: (E) Interact
 --- !u!1001 &811364648021852560
 PrefabInstance:
@@ -28174,6 +28174,10 @@ PrefabInstance:
     - target: {fileID: 8477985855799104991, guid: d6321959b647d794db5b51b94eaf3a81, type: 3}
       propertyPath: Sensitivity
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477985855799104991, guid: d6321959b647d794db5b51b94eaf3a81, type: 3}
+      propertyPath: interactRange
+      value: 4.05
       objectReference: {fileID: 0}
     - target: {fileID: 8477985855799104991, guid: d6321959b647d794db5b51b94eaf3a81, type: 3}
       propertyPath: bodyCatchupSpeed

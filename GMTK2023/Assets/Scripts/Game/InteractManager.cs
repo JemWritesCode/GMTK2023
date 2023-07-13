@@ -1,3 +1,5 @@
+using System;
+
 using UnityEngine;
 
 public class InteractManager : MonoBehaviour {
@@ -41,31 +43,40 @@ public class InteractManager : MonoBehaviour {
   }
 
   Camera _mainCamera;
+
   readonly RaycastHit[] _raycastHits = new RaycastHit[10];
-  InteractableHover _closestInteractable;
+  readonly float[] _hitDistanceCache = new float[10];
+
+  public InteractableHover ClosestInteractable { get; private set; }
 
   void FixedUpdate() {
-    _closestInteractable = CanInteract && InteractAgent ? GetClosestInteractable(InteractAgent.transform) : default;
+    ClosestInteractable = CanInteract && InteractAgent ? GetClosestInteractable(InteractAgent.transform) : default;
   }
 
   void Update() {
-    InteractPanel.SetInteractable(_closestInteractable);
+    InteractPanel.SetInteractable(ClosestInteractable);
   }
 
   InteractableHover GetClosestInteractable(Transform origin) {
     int count =
         Physics.SphereCastNonAlloc(
             origin.position,
-            1f,
+            0.25f,
             _mainCamera.transform.forward,
             _raycastHits,
-            5f,
+            4f,
             -1,
             QueryTriggerInteraction.Ignore);
 
     if (count <= 0) {
       return default;
     }
+
+    for (int i = 0; i < count; i++) {
+      _hitDistanceCache[i] = _raycastHits[i].distance;
+    }
+
+    Array.Sort(_hitDistanceCache, _raycastHits, 0, count);
 
     for (int i = 0; i < count; i++) {
       if (_raycastHits[i].collider.TryGetComponent(out InteractableHover interactable)
