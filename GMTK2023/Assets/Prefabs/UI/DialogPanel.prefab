@@ -765,8 +765,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <DialogPanel>k__BackingField: {fileID: 6093061191166583406}
+  <TitleFrame>k__BackingField: {fileID: 3157667598799500048}
   <DialogTitle>k__BackingField: {fileID: 4805226164899010037}
   <DialogText>k__BackingField: {fileID: 395130564218663990}
+  <SpeakerFrame>k__BackingField: {fileID: 7236802185467372627}
   <SpeakerPortrait>k__BackingField: {fileID: 8028449782864308810}
   <ConfirmButton>k__BackingField: {fileID: 5793748456845998410}
   <ConfirmButtonLabel>k__BackingField: {fileID: 1859710140011852755}
@@ -782,8 +784,8 @@ GameObject:
   - component: {fileID: 1994672012489334976}
   - component: {fileID: 9123458524239983723}
   - component: {fileID: 7236802185467372627}
-  - component: {fileID: 3185183971854308748}
   - component: {fileID: 579340889448671344}
+  - component: {fileID: 2606960437845846410}
   m_Layer: 5
   m_Name: SpeakerFrame
   m_TagString: Untagged
@@ -850,21 +852,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 2.5
---- !u!114 &3185183971854308748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7945316821953435728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5019608}
-  m_EffectDistance: {x: 3, y: -3}
-  m_UseGraphicAlpha: 0
 --- !u!114 &579340889448671344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,8 +864,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding: {x: 0, y: 20, z: 0, w: 0}
+  m_Padding: {x: -20, y: 20, z: -20, w: -20}
   m_Softness: {x: 0, y: 0}
+--- !u!114 &2606960437845846410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7945316821953435728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BlurFactor: 1
+  m_Style: 1
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &8443308495239635010
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +959,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!1001 &6625237247614666857
 PrefabInstance:
   m_ObjectHideFlags: 0

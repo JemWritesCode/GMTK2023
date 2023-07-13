@@ -11,10 +11,16 @@ public class DialogPanelController : MonoBehaviour {
   public CanvasGroup DialogPanel { get; private set; }
 
   [field: SerializeField]
+  public Image TitleFrame { get; private set; }
+
+  [field: SerializeField]
   public TMP_Text DialogTitle { get; private set; }
 
   [field: SerializeField]
   public TMP_Text DialogText { get; private set; }
+
+  [field: SerializeField]
+  public Image SpeakerFrame { get; private set; }
 
   [field: SerializeField]
   public Image SpeakerPortrait { get; private set; }
@@ -44,7 +50,11 @@ public class DialogPanelController : MonoBehaviour {
   public void ShowPanel() {
     DialogPanel.DOComplete(withCallbacks: true);
     InteractManager.Instance.CanInteract = false;
-    DialogPanel.DOFade(1f, 0.25f)
+
+    DOTween.Sequence()
+        .SetTarget(DialogPanel)
+        .Insert(0f, DialogPanel.DOFade(1f, 0.25f))
+        .Insert(0f, SpeakerPortrait.transform.DOPunchScale(Vector3.one * 0.05f, 0.5f, 0, 0f))
         .OnComplete(() => {
           DialogPanel.blocksRaycasts = true;
           IsPanelVisible = true;
@@ -54,6 +64,7 @@ public class DialogPanelController : MonoBehaviour {
   public void HidePanel() {
     DialogPanel.DOComplete(withCallbacks: true);
     InteractManager.Instance.CanInteract = true;
+
     DialogPanel.DOFade(0f, 0.25f)
         .OnComplete(() => {
           DialogPanel.blocksRaycasts = false;
