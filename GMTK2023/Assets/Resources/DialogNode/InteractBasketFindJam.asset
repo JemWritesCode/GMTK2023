@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b276e699bd434cb8e77fea44a035a, type: 3}
+  m_Name: InteractBasketFindJam
+  m_EditorClassIdentifier: 
+  <NodeType>k__BackingField: 3
+  <NextNode>k__BackingField: {fileID: 0}
+  <ConversationTexts>k__BackingField:
+  - Looking inside the basket you see...
+  - A delicious jar of game jam!
+  <InteractItemPortrait>k__BackingField: {fileID: 21300000, guid: 8161d175caebcff4ebd1b478864333b5, type: 3}
+  <InteractItemTitle>k__BackingField: Basket of Jam
+  <QuestItemNeeded>k__BackingField: {fileID: 0}
+  <QuestStartText>k__BackingField: 
+  <QuestPlayerMissingItemText>k__BackingField: 
+  <QuestPlayerHasItemText>k__BackingField: 
+  <TrackerTitle>k__BackingField: 
+  <TrackerInfoItemMissingText>k__BackingField: 
+  <TrackerInfoItemFoundText>k__BackingField: 
+  <SceneNameToLoad>k__BackingField: 

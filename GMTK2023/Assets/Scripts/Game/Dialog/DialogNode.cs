@@ -8,7 +8,8 @@ public class DialogNode : ScriptableObject {
   public enum DialogNodeType {
     Conversation,
     FindItemQuest,
-    SceneChange
+    SceneChange,
+    InteractItem
   }
 
   [field: SerializeField, Header("Node")]
@@ -22,6 +23,12 @@ public class DialogNode : ScriptableObject {
 
   [field: NonSerialized]
   public int ConversationTextIndex = 0;
+
+  [field: SerializeField, Header("InteractItem")]
+  public Sprite InteractItemPortrait { get; private set; }
+
+  [field: SerializeField]
+  public string InteractItemTitle { get; private set; }
 
   [field: SerializeField, Header("Quest")]
   public QuestItemData QuestItemNeeded { get; private set; }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b276e699bd434cb8e77fea44a035a, type: 3}
+  m_Name: InteractYoloThing
+  m_EditorClassIdentifier: 
+  <NodeType>k__BackingField: 3
+  <NextNode>k__BackingField: {fileID: 0}
+  <ConversationTexts>k__BackingField:
+  - This box is filled to the brim with yolos!
+  <InteractItemPortrait>k__BackingField: {fileID: 21300000, guid: 6dd69b36253621346ae2c5166e6caa16, type: 3}
+  <InteractItemTitle>k__BackingField: Box o' Yolos
+  <QuestItemNeeded>k__BackingField: {fileID: 0}
+  <QuestStartText>k__BackingField: 
+  <QuestPlayerMissingItemText>k__BackingField: 
+  <QuestPlayerHasItemText>k__BackingField: 
+  <TrackerTitle>k__BackingField: 
+  <TrackerInfoItemMissingText>k__BackingField: 
+  <TrackerInfoItemFoundText>k__BackingField: 
+  <SceneNameToLoad>k__BackingField: 

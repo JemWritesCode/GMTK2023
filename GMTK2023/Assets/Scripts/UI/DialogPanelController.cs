@@ -75,10 +75,30 @@ public class DialogPanelController : MonoBehaviour {
   UnityAction _confirmAction;
 
   public void ShowDialogNode(DialogActor actor, string dialogText, UnityAction confirmAction = default) {
-    DialogTitle.text = actor.ActorName;
+    if (actor) {
+      ShowDialog(actor.ActorName, dialogText, actor.ActorPortrait, actor.ActorPortraitScale, confirmAction);
+    } else {
+      ShowDialog("...", dialogText, default, Vector3.one, confirmAction);
+    }
+  }
+
+  public void ShowDialog(
+      string actorName,
+      string dialogText,
+      Sprite actorPortrait,
+      Vector3 portraitScale,
+      UnityAction confirmAction = default) {
+    DialogTitle.text = actorName;
     DialogText.text = dialogText;
-    SpeakerPortrait.sprite = actor.ActorPortrait;
-    SpeakerPortrait.transform.localScale = actor.ActorPortraitScale;
+
+    if (actorPortrait) {
+      SpeakerPortrait.enabled = true;
+      SpeakerPortrait.sprite = actorPortrait;
+      SpeakerPortrait.transform.localScale = portraitScale;
+    } else {
+      SpeakerPortrait.enabled = false;
+      SpeakerPortrait.sprite = default;
+    }
 
     _confirmAction = confirmAction;
 

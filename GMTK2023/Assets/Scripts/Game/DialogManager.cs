@@ -46,6 +46,14 @@ public class DialogManager : MonoBehaviour {
     }
   }
 
+  public void InteractWithItem(DialogNode node) {
+    if (DialogUI.IsPanelVisible) {
+      return;
+    }
+
+    ProcessNode(default, node);
+  }
+
   public void ProcessFindItemQuestNode(DialogActor actor, DialogNode node) {
     if (QuestManager.Instance.CurrentQuest == node) {
       if (QuestManager.Instance.CurrentQuestItem == node.QuestItemNeeded) {
@@ -84,6 +92,25 @@ public class DialogManager : MonoBehaviour {
     SceneManager.LoadScene(node.SceneNameToLoad);
   }
 
+  public void ProcessInteractItemNode(DialogActor actor, DialogNode node) {
+    if (node.ConversationTextIndex >= node.ConversationTexts.Count) {
+      ProcessNode(actor, node.NextNode);
+      node.ConversationTextIndex = 0;
+
+      return;
+    }
+
+    DialogUI.ShowDialog(
+        node.InteractItemTitle,
+        node.ConversationTexts[node.ConversationTextIndex],
+        node.InteractItemPortrait,
+        Vector3.one,
+        () => {
+          node.ConversationTextIndex++;
+          ProcessNode(actor, node);
+        });
+  }
+
   public void ProcessNode(DialogActor actor, DialogNode node) {
     if (!node) {
       DialogUI.HidePanel();
@@ -96,6 +123,8 @@ public class DialogManager : MonoBehaviour {
       ProcessFindItemQuestNode(actor, node);
     } else if (node.NodeType == DialogNode.DialogNodeType.SceneChange) {
       ProcessSceneChangeNode(node);
+    } else if (node.NodeType == DialogNode.DialogNodeType.InteractItem) {
+      ProcessInteractItemNode(actor, node);
     }
   }
 }
