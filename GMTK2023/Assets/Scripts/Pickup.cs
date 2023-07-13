@@ -1,20 +1,27 @@
+using SUPERCharacter;
+
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    // When hovered over, show the [E] to interact button
-
-    // if (currentItem'sTurn) // only show the effect if it's a relevant item for the current quest. That way people don't see it sparkle too early
-    // some kind of effect on pickups. Maybe just a particle effect
+    // When hovered over, show the [E] to interact button.
 
     [SerializeField] AudioSource pickupSound;
-    GameObject player;
 
-    [field: SerializeField]
-    public GameObject QuestPickupEffect { get; private set; }
+    // Only show the effect if it's a relevant item for the current quest.
+    // That way people don't see it sparkle too early.
+    // Some kind of effect on pickups. Maybe just a particle effect.
 
     [field: SerializeField, Header("Quest")]
+    public GameObject QuestPickupEffect { get; private set; }
+
+    [field: SerializeField]
     public QuestItemData QuestItem { get; private set; }
+
+    [field: SerializeField]
+    public InteractableHover PickupInteractable { get; private set; } 
+
+    GameObject player;
 
     private void Start()
     {
@@ -25,11 +32,20 @@ public class Pickup : MonoBehaviour
         if (QuestPickupEffect) {
           QuestPickupEffect.SetActive(false);
         }
+
+        // If the Pickup has an Interactable, only enable it when it's the current quest item.
+        if (PickupInteractable) {
+          PickupInteractable.enabled = false;
+        }
     }
 
     public void OnSetCurrentQuestEventHandler(QuestItemData questItem) {
       if (QuestPickupEffect) {
         QuestPickupEffect.SetActive(QuestItem && QuestItem == questItem);
+      }
+
+      if (PickupInteractable) {
+        PickupInteractable.enabled = QuestItem && QuestItem == questItem;
       }
     }
 
