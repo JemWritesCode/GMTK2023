@@ -5,6 +5,9 @@ public class QuestManager : MonoBehaviour {
   [field: SerializeField]
   public QuestTrackerPanelController QuestTrackerPanel { get; private set; }
 
+  [field: SerializeField]
+  public QuestMarkerController QuestMarker { get; private set; }
+
   static QuestManager _instance;
 
   public static QuestManager Instance {
@@ -46,6 +49,7 @@ public class QuestManager : MonoBehaviour {
   public void ClearCurrentQuest() {
     CurrentQuest = default;
     QuestTrackerPanel.HidePanel();
+    QuestMarker.HideMarker();
     OnSetCurrentQuestEvent?.Invoke(default);
   }
 
@@ -59,11 +63,33 @@ public class QuestManager : MonoBehaviour {
       QuestTrackerPanel.ShowQuestInfo(CurrentQuest.TrackerTitle, CurrentQuest.TrackerInfoItemFoundText);
       QuestTrackerPanel.ShowQuestItem(CurrentQuest.QuestItemNeeded);
     }
+
+    if (CurrentQuest
+        && !string.IsNullOrEmpty(CurrentQuest.QuestReturnToTargetTag)
+        && GetTargetByTag(CurrentQuest.QuestReturnToTargetTag, out QuestMarkerTarget target)) {
+      QuestMarker.ShowMarkerOnTarget(target);
+    } else {
+      QuestMarker.HideMarker();
+    }
+  }
+
+  bool GetTargetByTag(string targetTag, out QuestMarkerTarget questMarkerTarget) {
+    foreach (QuestMarkerTarget target in QuestMarkerTarget.Targets) {
+      if (target.TargetTag == targetTag) {
+        questMarkerTarget = target;
+        return true;
+      }
+    }
+
+    questMarkerTarget = default;
+    return false;
   }
 
   public void ClearCurrentQuestItem() {
     CurrentQuestItem = default;
     ClearPlayerEquippedQuestItem();
+
+    QuestMarker.HideMarker();
   }
 
   public void ClearPlayerEquippedQuestItem() {

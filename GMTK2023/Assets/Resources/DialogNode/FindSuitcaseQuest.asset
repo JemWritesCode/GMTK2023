@@ -24,6 +24,7 @@ MonoBehaviour:
     for our trip!
   <QuestPlayerHasItemText>k__BackingField: Sparrow, you've outdone yourself! We'll
     be able to carry so much in here!
+  <QuestReturnToTargetTag>k__BackingField: Scarecrow
   <TrackerTitle>k__BackingField: Pack Your Bags
   <TrackerInfoItemMissingText>k__BackingField: Find a bag for your trip!
   <TrackerInfoItemFoundText>k__BackingField: Bring the bag back to Scarecrow!

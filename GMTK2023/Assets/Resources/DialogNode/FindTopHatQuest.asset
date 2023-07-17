@@ -20,11 +20,12 @@ MonoBehaviour:
   <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: c9b7f3e91265d8f44b9d4455125f264e, type: 2}
   <QuestStartText>k__BackingField: We're gonna do this, sparrow! Do you think you
     could find something around here to spruce up my outfit? I want to make a good
-    impression on the world. I always see them having fancy tea parties in the maze.
-  <QuestPlayerMissingItemText>k__BackingField: '*muttering* What should I wear? I
-    always see them having such fancy tea parties in the maze...'
-  <QuestPlayerHasItemText>k__BackingField: Wow! I'm going to look so stylish! Thank
-    you Sparrow.
+    impression on the world.
+  <QuestPlayerMissingItemText>k__BackingField: '*muttering* What style should I go
+    for...? Cool...? Fancy?'
+  <QuestPlayerHasItemText>k__BackingField: Wow! What an interesting piece for my
+    wardrobe! Thank you Sparrow.
+  <QuestReturnToTargetTag>k__BackingField: Scarecrow
   <TrackerTitle>k__BackingField: Dressing Up
   <TrackerInfoItemMissingText>k__BackingField: Find something for Scarecrow to wear
     in the maze.

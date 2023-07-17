@@ -24,7 +24,8 @@ MonoBehaviour:
     stuck in the dirt like this?
   <QuestPlayerHasItemText>k__BackingField: Sparrow! Be careful! But...that might
     just work...
-  <TrackerTitle>k__BackingField: Freedom for a Friend
+  <QuestReturnToTargetTag>k__BackingField: 
+  <TrackerTitle>k__BackingField: Freedom for Friend
   <TrackerInfoItemMissingText>k__BackingField: I need to find something to set my
     friend free!
   <TrackerInfoItemFoundText>k__BackingField: You found an axe! Bring it back to Scarecrow.

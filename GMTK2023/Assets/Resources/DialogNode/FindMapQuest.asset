@@ -23,6 +23,7 @@ MonoBehaviour:
   <QuestPlayerMissingItemText>k__BackingField: Hmm...maybe the farmer had a map when
     he travelled...
   <QuestPlayerHasItemText>k__BackingField: Great job! We won't get lost on our adventures.
+  <QuestReturnToTargetTag>k__BackingField: Scarecrow
   <TrackerTitle>k__BackingField: Nimble Navigation
   <TrackerInfoItemMissingText>k__BackingField: Find a map from the farmer's travels.
   <TrackerInfoItemFoundText>k__BackingField: Bring the map back to Scarecrow!
