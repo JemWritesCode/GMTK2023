@@ -15,7 +15,7 @@ MonoBehaviour:
   <NodeType>k__BackingField: 3
   <NextNode>k__BackingField: {fileID: 0}
   <ConversationTexts>k__BackingField:
-  - This box is filled to the brim with yolos!
+  - This box is filled to the brim with yolos! They're useless.
   <InteractItemPortrait>k__BackingField: {fileID: 21300000, guid: 6dd69b36253621346ae2c5166e6caa16, type: 3}
   <InteractItemTitle>k__BackingField: Box o' Yolos
   <QuestItemNeeded>k__BackingField: {fileID: 0}

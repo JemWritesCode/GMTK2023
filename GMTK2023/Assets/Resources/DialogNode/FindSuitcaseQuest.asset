@@ -15,6 +15,8 @@ MonoBehaviour:
   <NodeType>k__BackingField: 1
   <NextNode>k__BackingField: {fileID: 11400000, guid: 2cf86fd324f1e90428a2b62081b3715d, type: 2}
   <ConversationTexts>k__BackingField: []
+  <InteractItemPortrait>k__BackingField: {fileID: 0}
+  <InteractItemTitle>k__BackingField: 
   <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: 475c63dc4c2900b4a9ba86b672f79845, type: 2}
   <QuestStartText>k__BackingField: Well if we're gonna pack our bags and leave...we
     do need a bag.
@@ -23,5 +25,6 @@ MonoBehaviour:
   <QuestPlayerHasItemText>k__BackingField: Sparrow, you've outdone yourself! We'll
     be able to carry so much in here!
   <TrackerTitle>k__BackingField: Pack Your Bags
-  <TrackerInfoItemMissingText>k__BackingField: Find a bag.
+  <TrackerInfoItemMissingText>k__BackingField: Find a bag for your trip!
   <TrackerInfoItemFoundText>k__BackingField: Bring the bag back to Scarecrow!
+  <SceneNameToLoad>k__BackingField: 

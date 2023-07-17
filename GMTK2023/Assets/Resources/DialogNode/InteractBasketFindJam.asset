@@ -17,6 +17,7 @@ MonoBehaviour:
   <ConversationTexts>k__BackingField:
   - Looking inside the basket you see...
   - A delicious jar of game jam!
+  - Since I'm not making a sandwich it seems useless.
   <InteractItemPortrait>k__BackingField: {fileID: 21300000, guid: 8161d175caebcff4ebd1b478864333b5, type: 3}
   <InteractItemTitle>k__BackingField: Basket of Jam
   <QuestItemNeeded>k__BackingField: {fileID: 0}

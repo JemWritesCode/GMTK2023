@@ -15,6 +15,8 @@ MonoBehaviour:
   <NodeType>k__BackingField: 1
   <NextNode>k__BackingField: {fileID: 11400000, guid: c7a3557f09722c748942338ae88e159b, type: 2}
   <ConversationTexts>k__BackingField: []
+  <InteractItemPortrait>k__BackingField: {fileID: 0}
+  <InteractItemTitle>k__BackingField: 
   <QuestItemNeeded>k__BackingField: {fileID: 11400000, guid: e0d71b5f0b33cfb448f2685b76888e19, type: 2}
   <QuestStartText>k__BackingField: We'll need a map to figure out where we're going.
     The farmer always traveled a lot, maybe he had one?
@@ -22,6 +24,6 @@ MonoBehaviour:
     he travelled...
   <QuestPlayerHasItemText>k__BackingField: Great job! We won't get lost on our adventures.
   <TrackerTitle>k__BackingField: Nimble Navigation
-  <TrackerInfoItemMissingText>k__BackingField: Find a map.
+  <TrackerInfoItemMissingText>k__BackingField: Find a map from the farmer's travels.
   <TrackerInfoItemFoundText>k__BackingField: Bring the map back to Scarecrow!
   <SceneNameToLoad>k__BackingField: 
