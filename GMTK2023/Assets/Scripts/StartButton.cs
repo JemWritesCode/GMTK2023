@@ -5,16 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
-    [SerializeField] AudioSource startButtonSound;
+    [SerializeField] List<AudioSource> startButtonSounds;
 
     public void PlayStartButtonSound()
     {
-        startButtonSound.Play();
+        foreach(AudioSource sound in startButtonSounds) {
+            sound.Play();
+        }
+        
     }
 
     public void PauseStartButtonSound()
     {
-        startButtonSound.Pause();
+        foreach (AudioSource sound in startButtonSounds)
+        {
+            sound.Pause();
+        }
     }
 
     public void StartGame()
