@@ -69,7 +69,7 @@ public class QuestMarkerController : MonoBehaviour {
     while (target) {
       yield return null;
 
-      Vector3 screenPoint = camera.WorldToScreenPoint(target.transform.position);
+      Vector3 screenPoint = camera.WorldToScreenPoint(target.transform.position + target.TargetOffset);
 
       MarkerRectTransform.anchoredPosition =
           new(Mathf.Clamp(screenPoint.x / factor, 0f, width), Mathf.Clamp(screenPoint.y / factor, 0f, height));
