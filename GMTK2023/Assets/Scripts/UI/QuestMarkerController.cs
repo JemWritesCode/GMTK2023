@@ -62,14 +62,23 @@ public class QuestMarkerController : MonoBehaviour {
   IEnumerator TrackTarget(QuestMarkerTarget target) {
     Camera camera = Camera.main;
     float factor = GetComponentInParent<Canvas>().scaleFactor;
-    Vector2 sizeDelta = MarkerRectTransform.sizeDelta;
     float width = Screen.width / factor;
     float height = Screen.height / factor;
 
     while (target) {
       yield return null;
 
-      Vector3 screenPoint = camera.WorldToScreenPoint(target.transform.position + target.TargetOffset);
+      // See: https://forum.unity.com/threads/ui-image-follow-gameobject.448431/#post-7391171
+      Vector3 targetPosition = target.transform.position + target.TargetOffset;
+      Vector3 cameraForward = camera.transform.forward;
+      Vector3 cameraPosition = camera.transform.position + cameraForward;
+      float distanceInFrontOfCamera = Vector3.Dot(targetPosition - cameraPosition, cameraForward);
+
+      if (distanceInFrontOfCamera < 0f) {
+        targetPosition -= cameraForward * distanceInFrontOfCamera;
+      }
+
+      Vector3 screenPoint = camera.WorldToScreenPoint(targetPosition);
 
       MarkerRectTransform.anchoredPosition =
           new(Mathf.Clamp(screenPoint.x / factor, 0f, width), Mathf.Clamp(screenPoint.y / factor, 0f, height));
