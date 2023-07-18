@@ -61,12 +61,14 @@ public class QuestMarkerController : MonoBehaviour {
 
   IEnumerator TrackTarget(QuestMarkerTarget target) {
     Camera camera = Camera.main;
-    float factor = GetComponentInParent<Canvas>().scaleFactor;
-    float width = Screen.width / factor;
-    float height = Screen.height / factor;
+    Canvas canvas = GetComponentInParent<Canvas>();
 
     while (target) {
       yield return null;
+
+      float factor = canvas.scaleFactor;
+      float width = Screen.width / factor;
+      float height = Screen.height / factor;
 
       // See: https://forum.unity.com/threads/ui-image-follow-gameobject.448431/#post-7391171
       Vector3 targetPosition = target.transform.position + target.TargetOffset;
