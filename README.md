@@ -5,8 +5,6 @@ This is our submission for the [GMTK Game Jam 2023](https://itch.io/jam/gmtk-202
 
 🐦 [Play the Game, Scarecrow and Sparrow](https://elevatecode.itch.io/scarecrow-and-sparrow) 🐦
 
-## Game Jam Theme
-
 ## Built with
  - Unity Game Engine
 ### Assets Used
@@ -16,3 +14,11 @@ This is our submission for the [GMTK Game Jam 2023](https://itch.io/jam/gmtk-202
  - [JemWritesCode](https://github.com/JemWritesCode) 
  - [Redseiko](https://github.com/redseiko)
  - [iesuzume](https://github.com/iesuzume)
+
+## Repository Setup
+Please note: You'll only really be able to run this game if you're on our team since we don't want to redistribute the assets.
+* Download this repository
+* Install Dotween https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676
+* Download the [GMTK private asset repository](https://github.com/JemWritesCode/GMTK2023Assets). Take everything in this folder and drag it into the ImportedAssets Folder
+* Install TMP Essentials
+* Open the 2-MainLevel scene and hit play
